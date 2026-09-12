@@ -4,7 +4,7 @@
 
 <p align="center"><b>Демо: <a href="https://pantry.klimnyk.dev">pantry.klimnyk.dev</a></b> · увійти своїм акаунтом «Сільпо»</p>
 
-<p align="center"><b>Відео-пітч: <a href="https://youtu.be/XNB0py3E9eA">youtu.be/XNB0py3E9eA</a></b></p>
+<p align="center"><b>Відео-пітч: <a href="https://youtu.be/MaYrDeVMxeA">youtu.be/MaYrDeVMxeA</a></b></p>
 
 <p align="center">
   <a href="https://github.com/mykhailoklimnyk/pantry/actions/workflows/ci.yml"><img src="https://github.com/mykhailoklimnyk/pantry/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
