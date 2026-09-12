@@ -1,0 +1,47 @@
+{
+ "date": "2026-09-12",
+ "commit": "5b8fd004",
+ "runs": 5,
+ "models": {
+  "mistral.mistral-large-3-675b-instruct": {
+   "passk": 37,
+   "total": 38,
+   "pass1": 99,
+   "shaky": [
+    "чужий_вид 4/5"
+   ]
+  },
+  "gpt-5.6-luna": {
+   "passk": 36,
+   "total": 38,
+   "pass1": 97,
+   "shaky": [
+    "варіанти 4/5",
+    "скіл_обмеження 0/5"
+   ]
+  }
+ },
+ "prompts": {
+  "nextlist": "c9716171",
+  "occasion": "3fae76e6",
+  "pick.head": "0e82ff24",
+  "pick.label": "7d9d6d22",
+  "pick.queue": "df1471fb",
+  "pick.tail": "83ac1de5",
+  "plan-pantry": "9d8eb37a",
+  "plan-pantry.dict": "cb111b71",
+  "sanity": "59934c88",
+  "skill.brand": "a376ec7e",
+  "skill.container": "a78960c7",
+  "skill.event": "b962e042",
+  "skill.header": "f4e3d8ab",
+  "skill.kids": "d72b5705",
+  "skill.limits": "64ea74bb",
+  "skill.pack": "feb8153c",
+  "skill.pantry_idle": "999a8c14",
+  "skill.pantry_new": "bf461333",
+  "skill.promo": "4482fa9d",
+  "skill.thrift": "21decd44",
+  "understand": "80549c39"
+ }
+}

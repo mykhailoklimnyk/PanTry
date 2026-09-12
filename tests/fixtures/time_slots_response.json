@@ -1,0 +1,68 @@
+{
+  "_комент": "Фактична відповідь silpo_get_time_slots, знята 12.08.2026. Скорочено до трьох слотів. Персональних даних не містить: branchId у відповіді немає.",
+  "success": true,
+  "summary": "Found 10 time slots (3 available)",
+  "slots": [
+    {
+      "start": "2026-08-12T06:00:00+00:00",
+      "end": "2026-08-12T08:00:00+00:00",
+      "available": false,
+      "deliveryType": "DeliveryHome",
+      "deliveryCost": 89,
+      "deliveryCostMap": [
+        { "cost": 59, "fromOrderCost": 1199 },
+        { "cost": 1, "fromOrderCost": 1699 }
+      ],
+      "minOrderCost": 599,
+      "maxWeight": 50,
+      "constraints": {
+        "isLimitedAlcohol": false,
+        "isLimitedTobacco": false,
+        "isLimitedCookedFood": true,
+        "isLimitedOwnCooking": true
+      },
+      "fast": null
+    },
+    {
+      "start": "2026-08-12T18:00:00+00:00",
+      "end": "2026-08-12T19:30:00+00:00",
+      "available": false,
+      "deliveryType": "DeliveryHome",
+      "deliveryCost": 89,
+      "deliveryCostMap": [
+        { "cost": 59, "fromOrderCost": 1199 },
+        { "cost": 1, "fromOrderCost": 1699 }
+      ],
+      "minOrderCost": 599,
+      "maxWeight": 50,
+      "constraints": {
+        "isLimitedAlcohol": false,
+        "isLimitedTobacco": false,
+        "isLimitedCookedFood": false,
+        "isLimitedOwnCooking": false
+      },
+      "fast": null
+    },
+    {
+      "start": "2026-08-13T08:00:00+00:00",
+      "end": "2026-08-13T10:00:00+00:00",
+      "available": true,
+      "deliveryType": "DeliveryHome",
+      "deliveryCost": 89,
+      "deliveryCostMap": [
+        { "cost": 59, "fromOrderCost": 1199 },
+        { "cost": 1, "fromOrderCost": 1699 }
+      ],
+      "minOrderCost": 599,
+      "maxWeight": 50,
+      "constraints": {
+        "isLimitedAlcohol": false,
+        "isLimitedTobacco": false,
+        "isLimitedCookedFood": false,
+        "isLimitedOwnCooking": false
+      },
+      "fast": null
+    }
+  ],
+  "meta": { "total": 10 }
+}

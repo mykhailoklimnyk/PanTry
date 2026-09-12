@@ -1,0 +1,906 @@
+[
+ {
+  "tool": "silpo_add_or_update_cart_products",
+  "sha": "58f84b8a5a79",
+  "kind": "code",
+  "verdict": "кошик перечитується після кожного запису",
+  "where": "agent/checkout.py (#113)",
+  "quote": "VERIFICATION (MANDATORY — DO THIS IMMEDIATELY): You MUST call silpo_get_shopping_cart_by_id IMMEDIATELY after "
+ },
+ {
+  "tool": "silpo_add_or_update_cart_products",
+  "sha": "660ef4db0598",
+  "kind": "open",
+  "verdict": "кількість не ріжеться по stock ДО запису; ловить лише перечитування після",
+  "where": "кандидат 4 у docs/mcp-tools.md",
+  "quote": "STOCK LIMIT: NEVER add quantity exceeding the product's stock value. Before calling this tool, always check th"
+ },
+ {
+  "tool": "silpo_add_or_update_cart_products",
+  "sha": "690245d0d0a7",
+  "kind": "code",
+  "verdict": "пакети не входять ні в комору, ні в кошик",
+  "where": "_SERVICE_FIRST_WORDS у agent/basket.py",
+  "quote": "PLASTIC BAGS: ALWAYS ignore plastic bags (пакет, пакет з пакетів, пакет-майка) — never add them to cart. Skip "
+ },
+ {
+  "tool": "silpo_add_or_update_cart_products",
+  "sha": "7abfbbc5db03",
+  "kind": "code",
+  "verdict": "UUID беремо з видачі пошуку, а не з чека",
+  "where": "agent/checkout.py",
+  "quote": "Add products to shopping cart or update quantities. Requires productId, companyId, and branchId from product s"
+ },
+ {
+  "tool": "silpo_add_or_update_cart_products",
+  "sha": "9e0f344d27d3",
+  "kind": "code",
+  "verdict": "success не є доказом: вирок дає перечитаний кошик",
+  "where": "core/blockers.py (#251)",
+  "quote": "success:true only means the write request was accepted — it does NOT mean the quantity is valid. This tool can"
+ },
+ {
+  "tool": "silpo_add_or_update_cart_products",
+  "sha": "de22744f5e51",
+  "kind": "code",
+  "verdict": "пишемо addQuantity: false і шлемо КІНЦЕВУ кількість -- рівно те, що радить абзац",
+  "where": "agent/checkout.py, agent/cart.py (#113)",
+  "quote": "ADD_QUANTITY DEFAULT: If addQuantity is omitted, the API defaults to false (replace) — the quantity you send b"
+ },
+ {
+  "tool": "silpo_add_or_update_certificates",
+  "sha": "15ed6c509d94",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "VALIDATION ERRORS: If added[].validations is non-empty, show the messages to the user — the certificate was no"
+ },
+ {
+  "tool": "silpo_add_or_update_certificates",
+  "sha": "2f4c077f81be",
+  "kind": "off",
+  "verdict": "сертифікати -- вітрина; Комора їх не застосовує",
+  "where": "CLAUDE.md, «Чого Комора свідомо не будує»",
+  "quote": "Add or remove gift certificates from the shopping cart in one call. Adds run before removes."
+ },
+ {
+  "tool": "silpo_add_or_update_certificates",
+  "sha": "6ec0e5bc486c",
+  "kind": "off",
+  "verdict": "перечитування після запису в нас є на своїх шляхах (#113)",
+  "where": "agent/checkout.py",
+  "quote": "MANDATORY: After calling this tool, ALWAYS call silpo_get_shopping_cart_by_id to verify the result and check i"
+ },
+ {
+  "tool": "silpo_add_or_update_certificates",
+  "sha": "89a9f0fcb854",
+  "kind": "off",
+  "verdict": "той самий інструмент вітрини",
+  "where": "CLAUDE.md",
+  "quote": "certificatesToAdd: get barcode and pincode from silpo_get_my_certificates or from user input. Max 10. certific"
+ },
+ {
+  "tool": "silpo_add_or_update_favorite_products",
+  "sha": "0e2aa7d2d654",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "Max 5 actions per call."
+ },
+ {
+  "tool": "silpo_add_or_update_favorite_products",
+  "sha": "2f5b43951a22",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "Use productId and externalProductId from any product-returning tool (silpo_get_my_favorites, silpo_find_produc"
+ },
+ {
+  "tool": "silpo_add_or_update_favorite_products",
+  "sha": "96a44322b2e3",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "To ADD: set toDelete=false. To REMOVE: set toDelete=true. Get productId and externalProductId from silpo_get_m"
+ },
+ {
+  "tool": "silpo_add_or_update_favorite_products",
+  "sha": "ceeb8675b927",
+  "kind": "off",
+  "verdict": "обране не пишемо: у чужі налаштування не пишемо нічого",
+  "where": "CLAUDE.md, «Наша справа -- подати ідею»",
+  "quote": "Add or remove products from the user's favorites list."
+ },
+ {
+  "tool": "silpo_clear_shopping_cart",
+  "sha": "bbaec8ae3698",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "#126",
+  "quote": "VERIFICATION (MANDATORY — DO THIS IMMEDIATELY): You MUST call silpo_get_shopping_cart_by_id IMMEDIATELY after "
+ },
+ {
+  "tool": "silpo_clear_shopping_cart",
+  "sha": "fa5b42757d6c",
+  "kind": "off",
+  "verdict": "кошик гостя не чистимо: наші записи поштучні, а стерте не повертається",
+  "where": "#126",
+  "quote": "Remove all products from the shopping cart."
+ },
+ {
+  "tool": "silpo_create_shopping_cart",
+  "sha": "0ee700d408d0",
+  "kind": "code",
+  "verdict": "після створення кошик перечитується",
+  "where": "agent/checkout.py (#272)",
+  "quote": "AFTER THIS TOOL: use the returned shoppingCartId with silpo_get_shopping_cart_by_id to view the created cart a"
+ },
+ {
+  "tool": "silpo_create_shopping_cart",
+  "sha": "646202e06481",
+  "kind": "code",
+  "verdict": "кличемо лише на exists=false",
+  "where": "agent/checkout.py (#272)",
+  "quote": "ONLY call this tool if silpo_get_my_shopping_cart returned exists=false. Do NOT call this tool if a cart alrea"
+ },
+ {
+  "tool": "silpo_create_shopping_cart",
+  "sha": "a982ef0f1e6e",
+  "kind": "ours",
+  "verdict": "перші два кроки робить код (адреса з пам'яті сесії, спосіб і філія з get_available_delivery_types, слот з плану), а третій -- ні: коли branchId порожній (самовивіз, Нова Пошта), філію ми НЕ дорезолвлюємо через list_branches -- її обирає гість, і вигадувати її за нього ми не маємо права",
+  "where": "core/location.decide, agent/place.branches_at (#47), agent/checkout.create_cart",
+  "quote": "REQUIRED WORKFLOW BEFORE CALLING THIS TOOL: 1. Call silpo_find_address to get latitude/longitude/city/street/h"
+ },
+ {
+  "tool": "silpo_create_shopping_cart",
+  "sha": "b67d16e16fe6",
+  "kind": "code",
+  "verdict": "поля збираються з тих самих джерел",
+  "where": "agent/checkout.create_cart",
+  "quote": "FIELD GUIDE: - addressType/latitude/longitude/city/street/house/district — from silpo_find_address (latitude/l"
+ },
+ {
+  "tool": "silpo_create_shopping_cart",
+  "sha": "d94330aace2d",
+  "kind": "code",
+  "verdict": "кошик створюємо на «Оформити», коли його в акаунті немає",
+  "where": "agent/checkout.create_cart (#272)",
+  "quote": "Create a shopping cart for the authenticated user."
+ },
+ {
+  "tool": "silpo_find_address",
+  "sha": "7098a87d3966",
+  "kind": "code",
+  "verdict": "координати їдуть у способи доставки",
+  "where": "agent/place.py (#47)",
+  "quote": "USE: Pass addresses[].latitude and addresses[].longitude to silpo_get_available_delivery_types."
+ },
+ {
+  "tool": "silpo_find_address",
+  "sha": "addcd11e208d",
+  "kind": "code",
+  "verdict": "адресу питаємо ОДИН раз, коли її немає в акаунті; у себе не зберігаємо",
+  "where": "api/places.py (#47)",
+  "quote": "Search for address coordinates using text input. Returns latitude and longitude for use with silpo_get_availab"
+ },
+ {
+  "tool": "silpo_find_nova_poshta_offices",
+  "sha": "5cf0b641b9ed",
+  "kind": "off",
+  "verdict": "сценарію Нової Пошти немає свідомо",
+  "where": "docs/mcp-tools.md",
+  "quote": "Search for Nova Poshta offices/parcel lockers in a settlement."
+ },
+ {
+  "tool": "silpo_find_nova_poshta_offices",
+  "sha": "af5b3a1b64e4",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "docs/mcp-tools.md",
+  "quote": "USE: After silpo_find_nova_poshta_settlements. Pass offices[].id, offices[].latitude, offices[].longitude, off"
+ },
+ {
+  "tool": "silpo_find_nova_poshta_settlements",
+  "sha": "e0d6b12df8f6",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "docs/mcp-tools.md",
+  "quote": "Search for cities available for Nova Poshta delivery. Returns settlement IDs needed for silpo_find_nova_poshta"
+ },
+ {
+  "tool": "silpo_find_products_batch",
+  "sha": "058a7b8aa4a1",
+  "kind": "code",
+  "verdict": "порожніх запитів у пачку не кладемо: запити -- назви з чеків і щаблі звуження",
+  "where": "agent/basket.search_products, core/queries",
+  "quote": "EMPTY ENTRIES: Empty strings and whitespace-only entries in `products` are silently skipped rather than search"
+ },
+ {
+  "tool": "silpo_find_products_batch",
+  "sha": "0df6c9c282e8",
+  "kind": "ours",
+  "verdict": "названа сума -- ЦІЛЬ з коридором +-10%, а не «витратити все»; кількість рядка з циклу гостя, а не з бюджету; один вид -- один рядок",
+  "where": "core/target.py (#142, #221, #231)",
+  "quote": "BUDGET: If user mentions a budget, ALWAYS fill the cart as close to the budget limit as possible. Maximize the"
+ },
+ {
+  "tool": "silpo_find_products_batch",
+  "sha": "1960b7bdcdd7",
+  "kind": "ours",
+  "verdict": "крок вагового рахуємо в кілограмах, але за відсутнього addToBasketStep беремо displayRatio (100г -> 0,1): абзац це забороняє, а іншого джерела немає, і вигадана одиниця вже коштувала рядок кошика (#78)",
+  "where": "core/packaging.sale_step (#78)",
+  "quote": "WEIGHTED PRODUCT UNITS: For weighted=true products, step and quantity (in silpo_add_or_update_cart_products) a"
+ },
+ {
+  "tool": "silpo_find_products_batch",
+  "sha": "24a4f8d51bf4",
+  "kind": "code",
+  "verdict": "той самий слот і філія на всьому конвеєрі",
+  "where": "slots_query (#255)",
+  "quote": "Search for multiple products at once (semicolon-separated, max 30). Prefer getting branchId/deliveryType/times"
+ },
+ {
+  "tool": "silpo_find_products_batch",
+  "sha": "24b27b331afc",
+  "kind": "code",
+  "verdict": "одиниця і крок продажу з картки, кількість вагового рахує код",
+  "where": "core/packaging.sale_unit, line_quantity (#78)",
+  "quote": "PACKAGE SIZE: displayRatio shows the actual content of one unit (e.g. \"400г\", \"10 шт\") — use it together with "
+ },
+ {
+  "tool": "silpo_find_products_batch",
+  "sha": "b1f62c0c0183",
+  "kind": "ours",
+  "verdict": "сторінок не добираємо: стеля пошуку не спрацювала жодного разу з 32 запитів, медіана видачі 6 при стелі 20 (#202)",
+  "where": "docs/measured.md 30.08",
+  "quote": "RESULT COUNT: queries[].totalFound is the real number of matches for that query — it can be larger than querie"
+ },
+ {
+  "tool": "silpo_find_products_batch",
+  "sha": "e3ce6b8758e7",
+  "kind": "code",
+  "verdict": "крок shelf.by_article шукає числовим lagerId з чека; застереження абзацу про нульовий залишок виконане ЗА ПОБУДОВОЮ -- крок лише додає кандидатів і відсутності ні з чого не виводить (#325, #343)",
+  "where": "agent/steps/shelf.by_article, core/plan.PLAN_GATED (#271)",
+  "quote": "SEARCH BY ARTICLE CODE: The `products` search terms accept exact numeric article codes (externalProductId) in "
+ },
+ {
+  "tool": "silpo_get_available_delivery_types",
+  "sha": "2bda02e6e012",
+  "kind": "ours",
+  "verdict": "самовивіз показуємо (#101), Нову Пошту свідомо не будуємо: Комора про стан дому і слот під нього",
+  "where": "docs/mcp-tools.md, «Не стосується»",
+  "quote": "NEXT STEPS BY TYPE: - DeliveryHome/WideAssortDelivery/B2B: branchId is provided, use directly - SelfPickup: br"
+ },
+ {
+  "tool": "silpo_get_available_delivery_types",
+  "sha": "a2060896c403",
+  "kind": "code",
+  "verdict": "філія і спосіб їдуть у слоти і пошук",
+  "where": "core/location.decide",
+  "quote": "USE: Pass deliveryType + branchId to silpo_update_shopping_cart or silpo_get_time_slots."
+ },
+ {
+  "tool": "silpo_get_available_delivery_types",
+  "sha": "d802bbc8b8c3",
+  "kind": "code",
+  "verdict": "філія питається окремо на кожен спосіб",
+  "where": "agent/place.py (#47)",
+  "quote": "Get all available delivery types for a location. Returns which delivery types are available at given coordinat"
+ },
+ {
+  "tool": "silpo_get_categories",
+  "sha": "9e9ade5a297a",
+  "kind": "off",
+  "verdict": "дерево беремо цілком одним get_categories_tree; посписковий обхід не потрібен",
+  "where": "#46",
+  "quote": "List categories at a Silpo branch. Optionally filter by parent category to get subcategories."
+ },
+ {
+  "tool": "silpo_get_categories_tree",
+  "sha": "7f03fbfd2159",
+  "kind": "code",
+  "verdict": "словник намірів; заміряно, що дерево одне на всі філії",
+  "where": "core/dictionary.py, jobs/categories.fetch_all (#46)",
+  "quote": "Get the full category hierarchy for a Silpo branch and time slot."
+ },
+ {
+  "tool": "silpo_get_category",
+  "sha": "2d41b2ec5dbc",
+  "kind": "off",
+  "verdict": "картку вузла не питаємо: обхід іде товарами вузла",
+  "where": "jobs/catalog.py (#217)",
+  "quote": "Get detailed info about a specific category (name, path, price range, children)."
+ },
+ {
+  "tool": "silpo_get_category",
+  "sha": "a48d3bb11c87",
+  "kind": "open",
+  "verdict": "visible:false не читаємо -- зайві виклики в тижневому обході",
+  "where": "кандидат 9 у docs/mcp-tools.md",
+  "quote": "VISIBLE:FALSE means this category has no products here — treat it as unavailable, don't browse it via silpo_ge"
+ },
+ {
+  "tool": "silpo_get_coupon_details",
+  "sha": "299fc92274fd",
+  "kind": "off",
+  "verdict": "не кличемо: купонів не читаємо, знижки беремо з самого кошика (calculation.totalAfterDiscounts)",
+  "where": "CLAUDE.md, стан на 16.08",
+  "quote": "ELIGIBILITY: Check canBeAppliedToOrder to know if this coupon is currently eligible to be used at all — it req"
+ },
+ {
+  "tool": "silpo_get_coupon_details",
+  "sha": "5605951dc82f",
+  "kind": "off",
+  "verdict": "не кличемо: вітрина",
+  "where": "CLAUDE.md",
+  "quote": "Get detailed info about a specific coupon by its ID (from silpo_get_my_coupons)."
+ },
+ {
+  "tool": "silpo_get_coupon_details",
+  "sha": "a45609fad50c",
+  "kind": "off",
+  "verdict": "rewards[] у чеку зберігаємо як джерело економіки; купони окремо не питаємо",
+  "where": "_STORED_ORDER у agent/basket.py",
+  "quote": "JOIN TO REWARDS: promoId matches rewards[].promoId in silpo_get_my_offline_orders — use it to check whether th"
+ },
+ {
+  "tool": "silpo_get_coupon_details",
+  "sha": "e7b04cc45779",
+  "kind": "off",
+  "verdict": "купонів не читаємо взагалі -- ні тут, ні деінде; поле нове (09.09) і на прод-акаунті непорожнє в 1 купона з 31 («4 доставки за 1 грн», 2 з 4)",
+  "where": "CLAUDE.md, docs/mcp-facts.md",
+  "quote": "PROGRESS: For coupons that require accumulating a spend/quantity/reward threshold (e.g. \"Придбайте на 2500 гри"
+ },
+ {
+  "tool": "silpo_get_loyalty_info",
+  "sha": "0498f36fa119",
+  "kind": "off",
+  "verdict": "баланс беремо з кошика тим самим читанням (#17), окремого виклику не робимо",
+  "where": "agent/cart.py",
+  "quote": "Get loyalty card info and balance for the authenticated user."
+ },
+ {
+  "tool": "silpo_get_my_certificates",
+  "sha": "0c8ce6ca891d",
+  "kind": "off",
+  "verdict": "не кличемо: вітрина",
+  "where": "CLAUDE.md",
+  "quote": "Get user gift certificates that can be applied to the shopping cart. Shows barcode, pincode, expiry date and v"
+ },
+ {
+  "tool": "silpo_get_my_certificates",
+  "sha": "ac6c724cb03c",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "TIMESTAMPS: createdAt and expireDate have no timezone offset in the raw data (unlike other tools) — do not ass"
+ },
+ {
+  "tool": "silpo_get_my_coupons",
+  "sha": "92c86fa0df7c",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "JOIN TO REWARDS: promoId matches rewards[].promoId in silpo_get_my_offline_orders — use it to check whether a "
+ },
+ {
+  "tool": "silpo_get_my_coupons",
+  "sha": "ec2463f33e82",
+  "kind": "off",
+  "verdict": "не кличемо: вітрина",
+  "where": "CLAUDE.md",
+  "quote": "List available coupons for the authenticated user."
+ },
+ {
+  "tool": "silpo_get_my_delivery_addresses",
+  "sha": "34e3cff6e5d8",
+  "kind": "code",
+  "verdict": "адреса акаунта -- перше джерело філії",
+  "where": "core/location.decide (#47)",
+  "quote": "Get saved delivery addresses for the authenticated user. Use coordinates from an address with silpo_get_availa"
+ },
+ {
+  "tool": "silpo_get_my_family",
+  "sha": "260afbbf94e9",
+  "kind": "open",
+  "verdict": "склад сім'ї не читаємо: «гості на N» гість набирає степером (#132)",
+  "where": "кандидат 10 у docs/mcp-tools.md",
+  "quote": "Get family info: household members, children, and pets. Helps personalize product recommendations."
+ },
+ {
+  "tool": "silpo_get_my_family",
+  "sha": "fe1e52f146e5",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "docs/mcp-tools.md",
+  "quote": "TIMESTAMPS: members[].profileCreatedAt has no timezone offset in the raw data (unlike other tools) — do not as"
+ },
+ {
+  "tool": "silpo_get_my_favorites",
+  "sha": "0829f105ff3d",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "PACKAGE SIZE: displayRatio shows the actual content of one unit (e.g. \"400г\", \"10 шт\") — use it together with "
+ },
+ {
+  "tool": "silpo_get_my_favorites",
+  "sha": "2e642eb305ee",
+  "kind": "off",
+  "verdict": "обране не читаємо: комора рахується з ЧЕКІВ, а не з позначок гостя в чужому продукті",
+  "where": "CLAUDE.md",
+  "quote": "Get the user's favorite products at a Silpo branch. Returns products in the same format as silpo_get_products "
+ },
+ {
+  "tool": "silpo_get_my_favorites",
+  "sha": "602c07d1a835",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "All inputs must be taken from silpo_get_shopping_cart_by_id: branchId, deliveryType, timeslotStart (slot.start"
+ },
+ {
+  "tool": "silpo_get_my_favorites",
+  "sha": "9dc3df8a6915",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "UNRESOLVABLE FAVORITES: a saved favorite may not be available at this branch at all — these are returned with "
+ },
+ {
+  "tool": "silpo_get_my_food_restrictions",
+  "sha": "4d517e3a8116",
+  "kind": "code",
+  "verdict": "обмеження з профілю доїжджають до агента і показуються; тумблера на них немає",
+  "where": "#49",
+  "quote": "Get user food restrictions (gluten-free, lactose-free, vegan, etc.). Use to personalize product recommendation"
+ },
+ {
+  "tool": "silpo_get_my_offline_orders",
+  "sha": "3381e03b4796",
+  "kind": "code",
+  "verdict": "без catalogProduct шукаємо драбиною звуження",
+  "where": "core/queries.narrow (#139)",
+  "quote": "RESPONSE: Products with catalogProduct !== null can be reordered via silpo_add_or_update_cart_products. Produc"
+ },
+ {
+  "tool": "silpo_get_my_offline_orders",
+  "sha": "4cf306121e1f",
+  "kind": "code",
+  "verdict": "офлайн-чеки -- одне з двох джерел моделі споживання",
+  "where": "agent/basket.Receipts (#234)",
+  "quote": "View in-store (offline) purchase history from physical Silpo shops."
+ },
+ {
+  "tool": "silpo_get_my_offline_orders",
+  "sha": "5df9df8e8c06",
+  "kind": "code",
+  "verdict": "наївний час читаємо як київський, а не як UTC",
+  "where": "#184",
+  "quote": "TIMESTAMPS: orders[].createdAt has no timezone offset in the raw data (unlike other tools that return explicit"
+ },
+ {
+  "tool": "silpo_get_my_offline_orders",
+  "sha": "649fa6009ee4",
+  "kind": "code",
+  "verdict": "офлайн і онлайн читаємо РАЗОМ: онлайн давав 264 види з 371, яких у чеках не було",
+  "where": "#234",
+  "quote": "Unlike silpo_get_my_online_orders (website/app orders), this shows purchases made at physical store checkouts "
+ },
+ {
+  "tool": "silpo_get_my_offline_orders",
+  "sha": "7f1eb5796f05",
+  "kind": "code",
+  "verdict": "історія читається за слотом філії",
+  "where": "api/history.py (#245)",
+  "quote": "REQUIRES: branchId, deliveryType, timeslotStart, timeslotEnd from silpo_get_shopping_cart_by_id to check produ"
+ },
+ {
+  "tool": "silpo_get_my_offline_orders",
+  "sha": "9b373fb0d16e",
+  "kind": "off",
+  "verdict": "чат-інструкція «покажи вигоду»; rewards[] зберігаємо як джерело економіки, не як вітрину",
+  "where": "_STORED_ORDER у agent/basket.py",
+  "quote": "HIGHLIGHT FOR USER: - accruedBalaBonusesSum — Балабонуси earned for this order. Show this to the user as a ben"
+ },
+ {
+  "tool": "silpo_get_my_offline_orders",
+  "sha": "d7783173be67",
+  "kind": "code",
+  "verdict": "той самий крок shelf.by_article: lagerId числом замість збігу назви",
+  "where": "core/plan.py (#271)",
+  "quote": "REORDER BY ARTICLE: products[].lagerId is the same identifier as externalProductId returned by silpo_find_prod"
+ },
+ {
+  "tool": "silpo_get_my_online_orders",
+  "sha": "2d8d4c4328e9",
+  "kind": "code",
+  "verdict": "друге джерело моделі споживання; артикула в позиції немає, міст -- назва з карти каталогу",
+  "where": "#234, 0018",
+  "quote": "View online delivery order history with product details. Only shows orders placed via silpo.ua or Silpo mobile"
+ },
+ {
+  "tool": "silpo_get_my_online_orders",
+  "sha": "93ec34f74caf",
+  "kind": "code",
+  "verdict": "зона зводиться при записі в історію",
+  "where": "api/history.py (#259)",
+  "quote": "TIMESTAMPS: createdAt and delivery.deliveredAt are UTC (explicit +00:00 offset) — always convert to the user's"
+ },
+ {
+  "tool": "silpo_get_my_premium_subscription",
+  "sha": "1139df682aa9",
+  "kind": "off",
+  "verdict": "чат-інструкція з підписами кнопок",
+  "where": "docs/mcp-tools.md",
+  "quote": "If subscription is NOT active: ALWAYS show BOTH links to the user — webLink labeled \"Оформити на сайті\" and mo"
+ },
+ {
+  "tool": "silpo_get_my_premium_subscription",
+  "sha": "55c11a039b7b",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "TIMESTAMPS: createdAt, dateFrom, and dateTo are UTC (explicit +00:00 offset) — always convert to the user's lo"
+ },
+ {
+  "tool": "silpo_get_my_premium_subscription",
+  "sha": "6e9b8c20658b",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "CLAUDE.md",
+  "quote": "Get premium subscription (Плюхс) details including features, balances, and benefits. Shows active subscription"
+ },
+ {
+  "tool": "silpo_get_my_premium_subscription",
+  "sha": "7c720a786529",
+  "kind": "off",
+  "verdict": "чат-інструкція з підписами кнопок",
+  "where": "docs/mcp-tools.md",
+  "quote": "If subscription IS active: ALWAYS show BOTH share links — shareWebLink labeled \"Поділитись (сайт)\" and shareMo"
+ },
+ {
+  "tool": "silpo_get_my_profile",
+  "sha": "fe43f13380f1",
+  "kind": "code",
+  "verdict": "з профілю беремо лише відбиток акаунта: ні імені, ні телефону, ні адреси",
+  "where": "db/newcomers.py, api/history.py (#259)",
+  "quote": "Get the authenticated user profile info (name, phone, email, birthday)."
+ },
+ {
+  "tool": "silpo_get_my_promos",
+  "sha": "04d172645c4d",
+  "kind": "off",
+  "verdict": "промо на вибір -- вітрина; акційну звичку судимо з ЧЕКІВ",
+  "where": "#265",
+  "quote": "Get personal promotional offers available for selection. User can choose which promos to activate for bonus re"
+ },
+ {
+  "tool": "silpo_get_my_shopping_cart",
+  "sha": "358cca37b7c5",
+  "kind": "code",
+  "verdict": "на exists=false кошик створюємо, а не падаємо",
+  "where": "agent/checkout.create_cart (#272)",
+  "quote": "If exists=false (no cart found yet for this user), you MUST call silpo_create_shopping_cart to create one befo"
+ },
+ {
+  "tool": "silpo_get_my_shopping_cart",
+  "sha": "f2cb037f7f82",
+  "kind": "code",
+  "verdict": "кошик -- джерело філії, способу і слота; для входу Б перше джерело",
+  "where": "core/location.decide (#47)",
+  "quote": "Get the authenticated user's shopping cart ID. START HERE — use this first, then silpo_get_shopping_cart_by_id"
+ },
+ {
+  "tool": "silpo_get_popular_categories",
+  "sha": "452c91ae10b3",
+  "kind": "off",
+  "verdict": "не кличемо: вітрина",
+  "where": "CLAUDE.md",
+  "quote": "List popular/trending categories at a Silpo branch."
+ },
+ {
+  "tool": "silpo_get_product_details",
+  "sha": "657d90a9865a",
+  "kind": "code",
+  "verdict": "slug лягає в карту каталогу з видачі; з назви не будується ніде",
+  "where": "0018",
+  "quote": "CRITICAL: The slug parameter MUST come from the slug field in silpo_find_products_batch or silpo_get_products "
+ },
+ {
+  "tool": "silpo_get_product_details",
+  "sha": "828797559eec",
+  "kind": "off",
+  "verdict": "картку деталей не читаємо: ваговість беремо з картки пошуку",
+  "where": "core/packaging (#78)",
+  "quote": "WEIGHTED: weighted is derived from ratio (\"кг\" = weighted, \"шт\" = unit-counted) when the underlying API omits "
+ },
+ {
+  "tool": "silpo_get_product_details",
+  "sha": "a6233767ed8f",
+  "kind": "code",
+  "verdict": "картку питаємо за slug з видачі",
+  "where": "jobs/catalog.py (0018)",
+  "quote": "Get detailed information about a specific product by branch and slug. Returns product attributes, nutrition in"
+ },
+ {
+  "tool": "silpo_get_product_details",
+  "sha": "c546e26fbdb9",
+  "kind": "code",
+  "verdict": "одиниця і крок продажу з картки",
+  "where": "core/packaging (#78)",
+  "quote": "PACKAGE SIZE: displayRatio shows the actual content of one unit (e.g. \"400г\", \"10 шт\") — use it together with "
+ },
+ {
+  "tool": "silpo_get_product_details",
+  "sha": "db933676c645",
+  "kind": "off",
+  "verdict": "картку деталей не читаємо; зображення -- посиланням з картки пошуку",
+  "where": "web/src/lib/CartLine.svelte",
+  "quote": "IMAGES: image is a single thumbnail; images is the full gallery (may include the same picture as image plus ad"
+ },
+ {
+  "tool": "silpo_get_product_details",
+  "sha": "f45db8837a1c",
+  "kind": "ours",
+  "verdict": "те саме правило з боку картки товару: крок у кілограмах, displayRatio лише запасним джерелом, коли кроку немає (#78)",
+  "where": "core/packaging.sale_step (#78)",
+  "quote": "WEIGHTED PRODUCT UNITS: For weighted=true products, step is ALWAYS expressed in KILOGRAMS regardless of what u"
+ },
+ {
+  "tool": "silpo_get_product_sets",
+  "sha": "a81f0f5c1302",
+  "kind": "off",
+  "verdict": "не кличемо: вітрина",
+  "where": "CLAUDE.md",
+  "quote": "Get curated product collections/sets at a Silpo branch. Use slug with silpo_get_products (set param) to browse"
+ },
+ {
+  "tool": "silpo_get_products",
+  "sha": "0829f105ff3d",
+  "kind": "code",
+  "verdict": "фасовка і крок з картки",
+  "where": "core/packaging (#78)",
+  "quote": "PACKAGE SIZE: displayRatio shows the actual content of one unit (e.g. \"400г\", \"10 шт\") — use it together with "
+ },
+ {
+  "tool": "silpo_get_products",
+  "sha": "7e812cad4482",
+  "kind": "code",
+  "verdict": "обхід каталогу ходить по вузлах дерева з фільтром категорії",
+  "where": "jobs/catalog.py (#217)",
+  "quote": "Browse products at a Silpo branch with filters. At least one filter required: category, mustHavePromotion, pro"
+ },
+ {
+  "tool": "silpo_get_products",
+  "sha": "86e3b8c99805",
+  "kind": "off",
+  "verdict": "сортування не просимо: вузол дерева -- ярус, порядок ставить наш код",
+  "where": "agent/basket (#217)",
+  "quote": "SORT ORDER: sortBy/sortDirection are NOT applied across the full result set — the API groups results along two"
+ },
+ {
+  "tool": "silpo_get_products",
+  "sha": "b523b46ba999",
+  "kind": "off",
+  "verdict": "фільтр ціни не просимо: коридор ціни для ланки рахує код",
+  "where": "core/substitution.PRICE_SPREAD (11.09)",
+  "quote": "PRICE FILTERS: fromPrice/toPrice filter by displayPrice, NOT price — for weighted products (weighted: true) th"
+ },
+ {
+  "tool": "silpo_get_promo_codes",
+  "sha": "17e2cc3e99d3",
+  "kind": "off",
+  "verdict": "не кличемо: вітрина",
+  "where": "CLAUDE.md",
+  "quote": "Get promo codes for the authenticated user."
+ },
+ {
+  "tool": "silpo_get_promotions",
+  "sha": "74eaf2e94411",
+  "kind": "off",
+  "verdict": "акції на полиці читаємо з картки товару, окремого переліку не питаємо",
+  "where": "#265",
+  "quote": "List active promotions at a Silpo branch. Returns promotion codes for use with silpo_get_products."
+ },
+ {
+  "tool": "silpo_get_promotions",
+  "sha": "cb88ee0bdabd",
+  "kind": "off",
+  "verdict": "не кличемо",
+  "where": "#265",
+  "quote": "All inputs must be taken from silpo_get_shopping_cart_by_id: branchId, deliveryType, timeslotStart (slot.start"
+ },
+ {
+  "tool": "silpo_get_replacements",
+  "sha": "9a02067bb687",
+  "kind": "open",
+  "verdict": "не кличемо, хоч ланцюжок замін -- головна обіцянка: 18 з 20 порожніх ланцюжків мали на полиці рівно один товар (#228)",
+  "where": "кандидат 6 у docs/mcp-tools.md",
+  "quote": "Find replacement candidates for products at risk of not being fulfilled by the picker/assembler — this is abou"
+ },
+ {
+  "tool": "silpo_get_shopping_cart_by_id",
+  "sha": "01ae3b6fa6b3",
+  "kind": "open",
+  "verdict": "обидва посилання приходять, екран показує одне",
+  "where": "кандидат 8 у docs/mcp-tools.md",
+  "quote": "CHECKOUT LINK: If checkoutWebLink/checkoutMobileLink are present in the response, ALWAYS show BOTH links to th"
+ },
+ {
+  "tool": "silpo_get_shopping_cart_by_id",
+  "sha": "2c7635ca86b5",
+  "kind": "ours",
+  "verdict": "поля кошика -- джерело філії, слота, суми і артикулів рядків, і показуємо ми totalAfterDiscounts (#40, #47). А вимогу «вийти за бюджет -- вернутись і різати» робимо ІНАКШЕ: коридор +-10% і різ рахуються ДО запису в чужий кошик, бо переписувати вже записане означає правити кошик гостя двічі (#142). validations[].message читаємо як ідентифікатор, а не речення: людські слова будує наш словник причин",
+  "where": "agent/cart.py, core/location.py, core/target.py (#40, #47, #142)",
+  "quote": "RESPONSE FIELDS GUIDE: - cart.shipments[0].branchId — use as branchId for product searches - cart.deliveryType"
+ },
+ {
+  "tool": "silpo_get_shopping_cart_by_id",
+  "sha": "390e4a9e87e2",
+  "kind": "code",
+  "verdict": "слот виставляється під план і звіряється зі СВІЖИМ читанням",
+  "where": "align_slot (#121)",
+  "quote": "TIMESLOT VALIDATION (MANDATORY — DO THIS IMMEDIATELY): You MUST call silpo_get_time_slots IMMEDIATELY after th"
+ },
+ {
+  "tool": "silpo_get_shopping_cart_by_id",
+  "sha": "6ab3542f10ff",
+  "kind": "code",
+  "verdict": "помилки блокують і називаються, попередження їдуть окремим полем без червоного",
+  "where": "core/blockers.py (#251, #272)",
+  "quote": "VALIDATION HANDLING: - ERRORS in cart.calculation.validations[] MUST be highlighted to the user — they block c"
+ },
+ {
+  "tool": "silpo_get_shopping_cart_by_id",
+  "sha": "6c606db66f0d",
+  "kind": "code",
+  "verdict": "пакети не беремо ні з чеків, ні з чужого кошика",
+  "where": "_SERVICE_FIRST_WORDS у agent/basket.py",
+  "quote": "PLASTIC BAGS: ALWAYS ignore plastic bags (пакет, пакет з пакетів, пакет-майка) when reordering products from t"
+ },
+ {
+  "tool": "silpo_get_shopping_cart_by_id",
+  "sha": "b9d43a7f2b13",
+  "kind": "off",
+  "verdict": "експрес не читаємо і не пропонуємо: Комора про стан дому і слот під нього, не про хвилини",
+  "where": "docs/mcp-tools.md, «Не стосується»",
+  "quote": "EXPRESS DELIVERY: - If cart.deliveryType = \"DeliveryExpressByPromise\": order will be delivered in ~cart.calcul"
+ },
+ {
+  "tool": "silpo_get_shopping_cart_by_id",
+  "sha": "e160dec6dadc",
+  "kind": "code",
+  "verdict": "кошик перечитується після кожного запису і перед «Оформити»",
+  "where": "agent/checkout.py (#113, #121)",
+  "quote": "View detailed shopping cart contents including products, delivery settings, totals, and errors/warnings."
+ },
+ {
+  "tool": "silpo_get_shopping_cart_by_id",
+  "sha": "f097de2b54d3",
+  "kind": "open",
+  "verdict": "число бонусів показуємо (#17), оплату ними не пропонуємо і bonusRequested не пишемо",
+  "where": "кандидат 5 у docs/mcp-tools.md",
+  "quote": "БАЛАБОНУСИ (BONUS PAY): Check cart.calculation.loyalty after this tool: - If bonusRequested is null AND bonusA"
+ },
+ {
+  "tool": "silpo_get_similar_products",
+  "sha": "0829f105ff3d",
+  "kind": "code",
+  "verdict": "фасовка і крок з картки",
+  "where": "core/packaging (#78)",
+  "quote": "PACKAGE SIZE: displayRatio shows the actual content of one unit (e.g. \"400г\", \"10 шт\") — use it together with "
+ },
+ {
+  "tool": "silpo_get_similar_products",
+  "sha": "9d952719fa44",
+  "kind": "code",
+  "verdict": "один з двох інструментів петлі дошуку: модель кличе його сама",
+  "where": "agent/loop.LOOP_TOOLS (#273)",
+  "quote": "Find products similar to a given product. Use to suggest alternatives."
+ },
+ {
+  "tool": "silpo_get_similar_products",
+  "sha": "dc158e15fb33",
+  "kind": "code",
+  "verdict": "петля дошуку передає тип доставки і слот пошуку (реліз 1.110.1)",
+  "where": "agent/basket._loop_similar (11.09)",
+  "quote": "STOCK ACCURACY: deliveryType/timeslotStart/timeslotEnd MUST be passed (from silpo_get_shopping_cart_by_id) for"
+ },
+ {
+  "tool": "silpo_get_time_slots",
+  "sha": "271801cfe9b3",
+  "kind": "code",
+  "verdict": "мінімум замовлення беремо саме зі слота і кажемо гостю, скільки лишилось добрати",
+  "where": "jobs/slots.py, core/delivery.py, core/slots.py (#178)",
+  "quote": "MIN ORDER COST: slots[].minOrderCost only exists in this tool's response. To tell the user the minimum order a"
+ },
+ {
+  "tool": "silpo_get_time_slots",
+  "sha": "3459fe5bd0df",
+  "kind": "code",
+  "verdict": "час зводиться кодом, а не при показі",
+  "where": "#184",
+  "quote": "TIMES: All times in the response are UTC — always convert to user's local timezone when presenting."
+ },
+ {
+  "tool": "silpo_get_time_slots",
+  "sha": "422105a49c3d",
+  "kind": "code",
+  "verdict": "філія з кошика, якщо гість не міняв адресу",
+  "where": "core/location.decide (#47)",
+  "quote": "BRANCH: Prefer using branchId from silpo_get_shopping_cart_by_id (existing cart). Only use silpo_get_available"
+ },
+ {
+  "tool": "silpo_get_time_slots",
+  "sha": "4d5a3dda55e9",
+  "kind": "code",
+  "verdict": "беремо лише available=true; вікно рахується від since, а не від початку доби",
+  "where": "slots_query, ворота на 12 скриптів (#178)",
+  "quote": "USAGE: Use slots[].start and slots[].end with silpo_update_shopping_cart timeslot param. Only pick slots where"
+ },
+ {
+  "tool": "silpo_get_time_slots",
+  "sha": "5ff25abb967e",
+  "kind": "code",
+  "verdict": "слоти питаємо по філії; крон спостерігає їх окремо",
+  "where": "core/slots.py, jobs/slots.py",
+  "quote": "Get available delivery time slots for a Silpo branch."
+ },
+ {
+  "tool": "silpo_list_branches",
+  "sha": "797ee363c6d7",
+  "kind": "code",
+  "verdict": "філії беремо з branchId, а не з id -- це впало на першому ж живому виклику",
+  "where": "jobs/catalog.sweep (31.08)",
+  "quote": "List available Silpo branches with pagination. Use with hasPickup=true when user wants SelfPickup delivery — s"
+ },
+ {
+  "tool": "silpo_remove_cart_products",
+  "sha": "8bbbd760cbae",
+  "kind": "code",
+  "verdict": "заміна -- це ДВІ дії: без зняття оригінал лишається лежати поруч",
+  "where": "cart.dropped_rows (#113)",
+  "quote": "Remove products from shopping cart. IMPORTANT: After this action, ALWAYS call silpo_get_shopping_cart_by_id to"
+ },
+ {
+  "tool": "silpo_update_shopping_cart",
+  "sha": "026d4a1e7c56",
+  "kind": "off",
+  "verdict": "сценарію Нової Пошти в продукті немає свідомо",
+  "where": "docs/mcp-tools.md, «Не стосується»",
+  "quote": "For NovaPoshta deliveryType: 1) Get settlement via silpo_find_nova_poshta_settlements 2) Get office via silpo_"
+ },
+ {
+  "tool": "silpo_update_shopping_cart",
+  "sha": "76ea39a9b6ef",
+  "kind": "off",
+  "verdict": "адресу самовивозу з list_branches не будуємо: адреса кошика -- з профілю гостя (#47) або копія з кошика (#121)",
+  "where": "agent/checkout.py",
+  "quote": "For SelfPickup deliveryType: address MUST use data from silpo_list_branches (hasPickup=true). Build address as"
+ },
+ {
+  "tool": "silpo_update_shopping_cart",
+  "sha": "86ae16f2b0e4",
+  "kind": "code",
+  "verdict": "адресу і shipments копіюємо з відповіді кошика, руками не будуємо",
+  "where": "agent/checkout.py (#121)",
+  "quote": "For other delivery types: the address object MUST be passed exactly as received from silpo_get_shopping_cart_b"
+ },
+ {
+  "tool": "silpo_update_shopping_cart",
+  "sha": "adc0ba00c142",
+  "kind": "off",
+  "verdict": "на експрес не перемикаємо: спосіб отримання обирає гість, а не збірка",
+  "where": "docs/mcp-tools.md, «Не стосується»",
+  "quote": "For DeliveryExpressByPromise deliveryType: Use this to switch to express delivery. Copy address, shipments, ti"
+ },
+ {
+  "tool": "silpo_update_shopping_cart",
+  "sha": "d215526915be",
+  "kind": "code",
+  "verdict": "після зміни кошик перечитується",
+  "where": "align_slot (#121)",
+  "quote": "Update cart delivery settings. IMPORTANT: After this action, ALWAYS call silpo_get_shopping_cart_by_id to veri"
+ }
+]

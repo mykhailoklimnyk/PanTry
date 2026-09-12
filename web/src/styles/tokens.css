@@ -1,0 +1,96 @@
+
+:root {
+  color-scheme: dark;
+
+  --accent: #f0a93b;
+  --acc-light: #ffbd42;
+  --acc-dark: #9e7027;
+  --acc-deep: #78551e;
+  --acc-soft: rgb(240 169 59 / 0.16);
+  --acc-edge: rgb(240 169 59 / 0.6);
+  --acc-half: rgb(240 169 59 / 0.35);
+  --acc-glow: radial-gradient(circle, rgb(240 169 59 / 0.3), rgb(240 169 59 / 0) 68%);
+  --acc-bar: linear-gradient(90deg, var(--acc-light), var(--acc-dark));
+
+  --pri-bg: var(--accent);
+  --pri-ink: #241a10;
+
+  --page-bg: #0e0b08;
+  --app-bg: #100c08;
+  --list-bg: #191410;
+  --ink: #f6efe4;
+  --muted: #a79582;
+  --faint: #9c8a76;
+
+  --hair: rgb(255 225 190 / 0.11);
+  --hair-strong: rgb(255 225 190 / 0.22);
+  --chip-bg: rgb(255 236 205 / 0.07);
+  --thumb-bg: rgb(255 236 205 / 0.06);
+
+  --glass-bg: rgb(26 20 14 / 0.72);
+  --menu-bg: #221a12;
+  --trace-bg: rgb(20 16 11 / 0.8);
+  --trace-ink: #c9b99f;
+
+  --row-risk: #2a1b0e;
+  --row-dim: #141009;
+  --risk-ink: #ffb877;
+
+  --badge: var(--accent);
+  --badge-edge: rgb(240 169 59 / 0.42);
+  --badge-fill: rgb(240 169 59 / 0.12);
+  --warn: #e8935a;
+  --good: #8fcb7a;
+  --eco-ink: #b7dca4;
+  --eco-bg: rgb(50 72 40 / 0.35);
+  --eco-edge: rgb(106 168 79 / 0.38);
+  --mark-good: rgb(143 203 122 / 0.16);
+  --mark-warn: rgb(232 147 90 / 0.18);
+  --mark-none: rgb(255 255 255 / 0.07);
+
+  --logo-ink: #2a1b0b;
+  --logo-bg: linear-gradient(160deg, var(--acc-light), var(--acc-dark));
+  --logo-shadow: 0 4px 14px rgb(240 169 59 / 0.28);
+
+  --font-text: 'Manrope Variable', 'Manrope', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace;
+
+  --col: 440px;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --badge: #845d20;
+
+  --page-bg: #efe7da;
+  --app-bg: #fbf7f0;
+  --list-bg: #ffffff;
+  --ink: #241a10;
+  --muted: #6b5b4a;
+  --faint: #6b5b4a;
+
+  --hair: rgb(80 55 30 / 0.14);
+  --hair-strong: rgb(80 55 30 / 0.26);
+  --chip-bg: rgb(255 255 255 / 0.66);
+  --thumb-bg: rgb(120 85 45 / 0.07);
+
+  --glass-bg: rgb(255 252 247 / 0.72);
+  --menu-bg: #ffffff;
+  --trace-bg: rgb(255 252 247 / 0.8);
+  --trace-ink: #5a4a38;
+
+  --row-risk: #fff3e2;
+  --row-dim: #faf6ef;
+  --risk-ink: #9c4a12;
+
+  --warn: #9c4a12;
+  --good: #3f7a2c;
+  --eco-ink: #2e5c21;
+  --eco-bg: rgb(200 226 190 / 0.45);
+  --mark-good: rgb(63 122 44 / 0.12);
+  --mark-warn: rgb(178 89 28 / 0.12);
+  --mark-none: rgb(0 0 0 / 0.05);
+
+  --logo-ink: #fff8ec;
+}

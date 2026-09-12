@@ -1,0 +1,15 @@
+[Unit]
+Description=Reverse SSH tunnel: Oracle 127.0.0.1:8101 -> Fedora komora-api
+OnFailure=komora-notify@%n.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/ssh -N -R 127.0.0.1:8101:127.0.0.1:8101 \
+  -o ServerAliveInterval=30 -o ServerAliveCountMax=3 \
+  -o ExitOnForwardFailure=yes -o StrictHostKeyChecking=accept-new oracle
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

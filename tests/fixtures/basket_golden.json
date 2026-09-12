@@ -1,0 +1,1972 @@
+{
+  "агент обрав один намір із трьох": {
+    "basket": {
+      "agentTarget": null,
+      "baseTotal": null,
+      "blockers": [
+        "order.cost.min"
+      ],
+      "budget": null,
+      "checkoutWebLink": null,
+      "cyclesNote": "за циклом стежу за всіма 1 видами твоїх чеків",
+      "declined": [],
+      "deliveryCost": 89.0,
+      "feedback": {
+        "changes": null,
+        "contacts": null
+      },
+      "fillNote": null,
+      "lines": [
+        {
+          "atRisk": false,
+          "basePrice": null,
+          "cardUrl": "https://silpo.ua/product/slug-101",
+          "chain": [
+            {
+              "byWeight": false,
+              "externalProductId": "102",
+              "name": "Молоко Яготинське 2,6%",
+              "price": 75.99,
+              "ratio": "1шт",
+              "source": "similar"
+            }
+          ],
+          "cheaper": null,
+          "confidence": 0.9,
+          "considered": [
+            {
+              "available": true,
+              "byWeight": false,
+              "cardUrl": "https://silpo.ua/product/slug-102",
+              "externalProductId": "102",
+              "imageUrl": null,
+              "kind": null,
+              "name": "Молоко Яготинське 2,6%",
+              "price": 75.99,
+              "ratio": "1шт",
+              "sameKind": null,
+              "sliced": false,
+              "stock": 9.0
+            }
+          ],
+          "consideredTotal": 2,
+          "decided": false,
+          "explanation": "звичне з історії — 4 чеки",
+          "explanationDetail": "звичне з історії — 4 чеки",
+          "externalProductId": "101",
+          "imageUrl": null,
+          "mandate": "якщо немає — Молоко Яготинське 2,6%, інакше не брати",
+          "mandateAhead": true,
+          "name": "Молоко Ферма 2,5%",
+          "needsApproval": false,
+          "price": 53.49,
+          "qty": 1.0,
+          "reason": "frequency",
+          "saleNote": null,
+          "sliced": false,
+          "slicingNote": null,
+          "step": null,
+          "swapFork": null,
+          "unit": "шт",
+          "weightKg": null
+        },
+        {
+          "atRisk": true,
+          "basePrice": null,
+          "cardUrl": "https://silpo.ua/product/slug-201",
+          "chain": [],
+          "cheaper": null,
+          "confidence": 0.5,
+          "considered": [],
+          "consideredTotal": 1,
+          "decided": false,
+          "explanation": "підібрано під намір зі списку",
+          "explanationDetail": "перший доступний під намір",
+          "externalProductId": "201",
+          "imageUrl": null,
+          "mandate": "заміни не підбирати, інакше не брати",
+          "mandateAhead": false,
+          "name": "Кава Lavazza",
+          "needsApproval": false,
+          "price": 245.0,
+          "qty": 1.0,
+          "reason": "frequency",
+          "saleNote": null,
+          "sliced": false,
+          "slicingNote": null,
+          "step": null,
+          "swapFork": null,
+          "unit": "шт",
+          "weightKg": null
+        }
+      ],
+      "notCollected": [],
+      "planNote": "план моделі не годиться після 2 спроб (жодного кроку не лишилось) — план з коду",
+      "postponed": [],
+      "questions": [],
+      "runId": "live",
+      "shelfNote": null,
+      "slot": {
+        "end": "2026-08-14T13:00:00Z",
+        "note": "єдиний вільний з 1 найближчих — вибору не було",
+        "start": "2026-08-14T11:30:00Z"
+      },
+      "stats": {
+        "cycled": 1,
+        "mcpCalls": 7,
+        "model": "fake-model",
+        "orders": 0,
+        "receipts": 4,
+        "tokensCached": 0
+      },
+      "textIgnored": [],
+      "topUp": {
+        "items": [],
+        "saving": 30.0,
+        "threshold": 1199.0
+      },
+      "total": 298.49,
+      "totalWeightKg": 0.0,
+      "trace": [
+        {
+          "args": {
+            "адреса в акаунті": true,
+            "входи": [
+              "address"
+            ],
+            "дав": {
+              "address": "1 (place.address)",
+              "delivery_types": "1 (place.delivery_types)"
+            },
+            "крок": "place.address, place.delivery_types"
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-address",
+          "question": null,
+          "resultSummary": "адреса є, способів отримання з філією 1",
+          "seq": 1,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_get_my_delivery_addresses"
+        },
+        {
+          "args": {
+            "крок": "place.cart",
+            "помилка": "silpo_get_my_shopping_cart: стенд на фікстурах: мережі немає, а файлу silpo_get_my_shopping_cart.json теж (спроб: 1)",
+            "причина": "кошик не прочитався (silpo_get_my_shopping_cart: стенд на фікстурах: ме) — слот беремо перший вільний",
+            "уже відомо": [
+              "address",
+              "delivery_types"
+            ]
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-cart",
+          "question": null,
+          "resultSummary": "кошик не прочитався (silpo_get_my_shopping_cart: стенд на фікстурах: ме) — слот беремо перший вільний",
+          "seq": 2,
+          "tag": "не виконано",
+          "tagTone": "warn",
+          "tool": "silpo_get_my_shopping_cart"
+        },
+        {
+          "args": {
+            "входи": [],
+            "дав": {
+              "branch": "1 (place.decide)",
+              "delivery_type": "1 (place.decide)"
+            },
+            "крок": "place.decide"
+          },
+          "decision": "наявність міряється там, звідки збиратимуть",
+          "externalProductId": null,
+          "id": "step-place",
+          "question": null,
+          "resultSummary": "магазин збирання визначено за цією адресою",
+          "seq": 3,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_get_available_delivery_types"
+        },
+        {
+          "args": {
+            "deliveryTypes": [
+              "DeliveryHome"
+            ],
+            "limit": 20,
+            "входи": [
+              "branch",
+              "delivery_type",
+              "slots"
+            ],
+            "вікно": "2026-08-14T11:30:00+00:00 — 2026-08-14T13:00:00+00:00",
+            "дав": {
+              "slot": "8 (slot.pick)",
+              "slots": "1 (slot.list)"
+            },
+            "крок": "slot.list, slot.pick"
+          },
+          "decision": "єдиний вільний з 1 найближчих — вибору не було",
+          "externalProductId": null,
+          "id": "step-slots",
+          "question": null,
+          "resultSummary": "обрано слот сьогодні 14:30–16:00 — вільних 1 з 1 найближчих",
+          "seq": 4,
+          "tag": "не з кошика",
+          "tagTone": "muted",
+          "tool": "silpo_get_time_slots"
+        },
+        {
+          "args": {
+            "max_pages": 20,
+            "online_page": 50,
+            "online_pages": 8,
+            "входи": [
+              "branch",
+              "receipts",
+              "slot"
+            ],
+            "дав": {
+              "history": "1 (history.model)",
+              "orders": "1 (history.orders)",
+              "receipts": "4 (history.receipts)"
+            },
+            "крок": "history.receipts, history.orders, history.model"
+          },
+          "decision": "історія покупок читається лише разом з магазином і слотом; сам набір чеків від магазину не залежить",
+          "externalProductId": null,
+          "id": "step-history",
+          "question": null,
+          "resultSummary": "4 чеків (вся історія, свіжі 90 днів важать більше), 1 різних товарів",
+          "seq": 5,
+          "tag": null,
+          "tagTone": "warn",
+          "tool": "silpo_get_my_offline_orders"
+        },
+        {
+          "args": {
+            "джерело": "code",
+            "кроків": 22,
+            "описи": "описів не було",
+            "план": "place.address -> place.delivery_types -> place.cart -> place.decide -> slot.list -> slot.pick -> history.receipts -> history.orders -> history.model -> intents.compose -> shelf.search -> shelf.by_article -> decide.pick -> decide.clarify -> decide.chain -> decide.loop -> economy.settle -> cart.slot -> cart.write -> cart.reread -> cart.revalidate -> cart.reread",
+            "спроб": 2,
+            "токенів": 4
+          },
+          "decision": "який крок і в якому порядку — рішення моделі; інваріанти (слот від «зараз», перечитування після запису, дозвіл на запис) — сталі правила",
+          "externalProductId": null,
+          "id": "step-plan",
+          "question": null,
+          "resultSummary": "план моделі не годиться після 2 спроб (жодного кроку не лишилось) — план з коду: 22 кроки",
+          "seq": 6,
+          "tag": "план з коду",
+          "tagTone": "muted",
+          "tool": "agent.plan"
+        },
+        {
+          "args": {
+            "людей": null,
+            "режим": "week",
+            "стиль": null
+          },
+          "decision": "тиждень: наміри з комори, циклів і списку, добір під суму",
+          "externalProductId": null,
+          "id": "step-mode",
+          "question": null,
+          "resultSummary": "на тиждень: з поля: 3; за циклами: 0",
+          "seq": 7,
+          "tag": "3 намірів",
+          "tagTone": "muted",
+          "tool": "core.occasion"
+        },
+        {
+          "args": {
+            "входи": [
+              "history"
+            ],
+            "відкладено стелею": 0,
+            "дав": {
+              "intents": "3 (intents.compose)"
+            },
+            "добір під суму": 0,
+            "докинуте гостем": 0,
+            "дописане в комору": 0,
+            "з поля": 3,
+            "за циклами": 0,
+            "зі списку на потім": 0,
+            "крок": "intents.compose",
+            "під подію": 0,
+            "чекають акції": 0
+          },
+          "decision": "джерела намірів вирішує РЕЖИМ, а не план: половина джерел означала б кошик, у якому мовчки немає сказаного гостем",
+          "externalProductId": null,
+          "id": "step-intents",
+          "question": null,
+          "resultSummary": "список намірів закрито: 3",
+          "seq": 8,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "core.intents"
+        },
+        {
+          "args": {
+            "відкинуто": [],
+            "докинув": 0,
+            "зняв": 0,
+            "наміри": {
+              "докинув": [],
+              "зняв": []
+            },
+            "не взяв із тексту": [],
+            "переріз тексту": 0,
+            "питання": [],
+            "питань": 0,
+            "полиця впізнала": [],
+            "правки плану": [],
+            "токенів": 2
+          },
+          "decision": "що спитати і що докинути — рішення агента; стелі, різ і час очікування — сталі",
+          "externalProductId": null,
+          "id": "step-understand",
+          "question": null,
+          "resultSummary": "нічого не змінив: задача зрозуміла як є",
+          "seq": 9,
+          "tag": "без змін",
+          "tagTone": "muted",
+          "tool": "fake-model"
+        },
+        {
+          "args": {
+            "артикулів": 0,
+            "входи": [
+              "branch",
+              "history",
+              "slot"
+            ],
+            "дав": {
+              "candidates": "10 (shelf.by_article)"
+            },
+            "крок": "shelf.by_article",
+            "мс пошуку": null,
+            "на полиці": 0,
+            "того ж виду": 0,
+            "того ж виду на полиці": 0
+          },
+          "decision": "крок поставив план: опис інструмента називає пошук числом найнадійнішим збігом",
+          "externalProductId": null,
+          "id": "step-article",
+          "question": null,
+          "resultSummary": "за числовим артикулом: усе своє вже в видачі за назвою — пошуку не було",
+          "seq": 10,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_find_products_batch"
+        },
+        {
+          "args": {
+            "queries": 3,
+            "входи": [
+              "branch",
+              "intents",
+              "slot"
+            ],
+            "дав": {
+              "candidates": "10 (shelf.search)",
+              "intents": "3 (shelf.search)"
+            },
+            "крок": "shelf.search",
+            "мс пошуку": 0,
+            "порожніх": 1
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-batch",
+          "question": null,
+          "resultSummary": "кандидатів: 9 на 3 намірів; 1 намірів упізнано в історії; без жодного кандидата: 1",
+          "seq": 11,
+          "tag": "1 без товару",
+          "tagTone": "warn",
+          "tool": "silpo_find_products_batch"
+        },
+        {
+          "args": {
+            "артикулів": 0
+          },
+          "decision": "вузол дерева -- ярус, а не вето: перетин буває порожнім і на правильному наборі, тож порядок він міняє, а кандидатів не знімає",
+          "externalProductId": null,
+          "id": "step-kinds",
+          "question": null,
+          "resultSummary": "карти видів немає: без бази ярус вимкнено — читання не було",
+          "seq": 12,
+          "tag": "ярус не спрацював",
+          "tagTone": "muted",
+          "tool": "catalog_nodes"
+        },
+        {
+          "args": {
+            "поля": {},
+            "правил": 0,
+            "скілів": 0,
+            "чому": "жодного: тригерів не було"
+          },
+          "decision": "інструкція за тригером: кошик без правил і без приводу дістає рівно той промпт, що й до скілів",
+          "externalProductId": null,
+          "id": "step-skills",
+          "question": null,
+          "resultSummary": "жодного скіла: тригерів не було",
+          "seq": 13,
+          "tag": "жодного",
+          "tagTone": "muted",
+          "tool": "core.skills"
+        },
+        {
+          "args": {
+            "intents": 3,
+            "входи": [
+              "candidates",
+              "intents"
+            ],
+            "дав": {
+              "picks": "1 (decide.pick)"
+            },
+            "крок": "decide.pick",
+            "пачок": 1
+          },
+          "decision": "вибір товару і кількості — рішення агента",
+          "externalProductId": null,
+          "id": "step-agent",
+          "question": null,
+          "resultSummary": "агент обрав товари під 1 намірів",
+          "seq": 14,
+          "tag": "агент",
+          "tagTone": "good",
+          "tool": "fake-model"
+        },
+        {
+          "args": {
+            "день слота": "14.08",
+            "рядків": 2
+          },
+          "decision": "дата рахується з доведеного циклу і дня слота, а не питається; ярус зберігання вирішує, чи є сенс просити",
+          "externalProductId": null,
+          "id": "step-shelf-life",
+          "question": null,
+          "resultSummary": "жоден вид не дав доведеного циклу і швидкопсувного ярусу",
+          "seq": 15,
+          "tag": "нічого не змінилось",
+          "tagTone": "muted",
+          "tool": "core.shelf_life"
+        },
+        {
+          "args": {
+            "агент не взяв": 0,
+            "входи": [
+              "candidates"
+            ],
+            "дав": {
+              "chains": "1 (decide.chain)",
+              "lines": "2 (decide.chain)"
+            },
+            "з ланцюжком": 1,
+            "крок": "decide.chain",
+            "не знайшлось": 1,
+            "рядків": 2
+          },
+          "decision": "ланцюжок узгоджується наперед: після оформлення змінити замовлення вже не можна, і замінює збирач",
+          "externalProductId": null,
+          "id": "step-lines",
+          "question": null,
+          "resultSummary": "рядків кошика 2, із ланцюжком замін 1",
+          "seq": 16,
+          "tag": "1 із заміною",
+          "tagTone": "good",
+          "tool": "core.list"
+        },
+        {
+          "args": {
+            "входи": [
+              "candidates",
+              "lines"
+            ],
+            "дав": {
+              "lines": "2 (decide.loop)"
+            },
+            "діалог": [
+              "«шафран» → відмова: стеля 3 кроків: 1) інструмент порожньо → не з переліку; можна лише silpo_find_products_batch, silpo_get_similar_products, або закінчити полем finish → далі · 2) інструмент порожньо → не з переліку; можна лише silpo_find_products_batch, silpo_get_similar_products, або закінчити полем finish → далі · 3) інструмент порожньо → не з переліку; можна лише silpo_find_products_batch, silpo_get_similar_products, або закінчити полем finish → далі"
+            ],
+            "крок": "decide.loop",
+            "кроків": 3,
+            "намірів": 1,
+            "описи": "запасний текст",
+            "стеля": "3 намірів × 3 кроки",
+            "токенів": 6
+          },
+          "decision": "чим шукати далі — рішення агента; філію, слот і перелік інструментів сталий, артикул береться лише з побаченого",
+          "externalProductId": null,
+          "id": "step-loop",
+          "question": null,
+          "resultSummary": "дошукав 0 з 1 наміру за 3 кроки",
+          "seq": 17,
+          "tag": "не знайшлось",
+          "tagTone": "muted",
+          "tool": "агент"
+        },
+        {
+          "args": {
+            "виконано": [],
+            "зрізав валідатор": [],
+            "не влізло": [],
+            "нові факти": [],
+            "планувала": [],
+            "сказала «досить»": false,
+            "токенів": 2,
+            "чому": "",
+            "ще винні": [
+              "без рядка 1: шафран"
+            ]
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-turn",
+          "question": null,
+          "resultSummary": "оберт 1: планувала 0, виконала 0, нового дізналась 0; ще винні 1",
+          "seq": 18,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "model"
+        },
+        {
+          "args": {
+            "виконано": [],
+            "зрізав валідатор": [],
+            "не влізло": [],
+            "нові факти": [],
+            "планувала": [],
+            "сказала «досить»": false,
+            "токенів": 2,
+            "чому": "",
+            "ще винні": [
+              "без рядка 1: шафран"
+            ]
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-turn",
+          "question": null,
+          "resultSummary": "оберт 2: планувала 0, виконала 0, нового дізналась 0; ще винні 1",
+          "seq": 19,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "model"
+        },
+        {
+          "args": {
+            "викликів моделі": 2,
+            "кроки обертів": [
+              "нічого",
+              "нічого"
+            ],
+            "обертів": 2,
+            "причина": "ceiling",
+            "токенів": 4
+          },
+          "decision": "що робити з рештою намірів -- рішення моделі: вона бачить невиконане і сама каже, коли досить; набір кроків і стеля сталі",
+          "externalProductId": null,
+          "id": "step-spin",
+          "question": null,
+          "resultSummary": "петля добору спинилась: стеля перепланів (2 оберти, # с)",
+          "seq": 20,
+          "tag": "ceiling",
+          "tagTone": "warn",
+          "tool": "code"
+        },
+        {
+          "args": {
+            "виборів": 1,
+            "відмов": 0,
+            "чому": {}
+          },
+          "decision": "порожній вибір при наявних кандидатах — це відповідь «жоден не той», а не «не знайшлось»: порада мусить пасувати причині",
+          "externalProductId": null,
+          "id": "step-declined",
+          "question": null,
+          "resultSummary": "кандидати були під 1 намір; під кожен агент щось обрав",
+          "seq": 21,
+          "tag": "жодної",
+          "tagTone": "muted",
+          "tool": "агент"
+        },
+        {
+          "args": {},
+          "decision": "вага рахована з фасовок: у картці товару її немає",
+          "externalProductId": null,
+          "id": "step-weight",
+          "question": null,
+          "resultSummary": "вага кошика 0 кг при ліміті слота 50 кг; без 2 рядків — картка фасовки не назвала",
+          "seq": 22,
+          "tag": "0 кг",
+          "tagTone": "muted",
+          "tool": "core.weight"
+        },
+        {
+          "args": {},
+          "decision": "чи прочитає мандат збирач — не звіряли, галочка замін не читалась; до слота заміню сам — ре-валідація галочки не питає",
+          "externalProductId": null,
+          "id": "step-risk",
+          "question": null,
+          "resultSummary": "ризикових рядків 1 — ланцюжки готові наперед; ще 1 з мандатом напоготові: до слота -3 год при стелі 18",
+          "seq": 23,
+          "tag": "ризик",
+          "tagTone": "warn",
+          "tool": "core.substitution"
+        },
+        {
+          "args": {
+            "входи": [
+              "lines",
+              "slot"
+            ],
+            "дав": {
+              "economics": "1 (economy.settle)"
+            },
+            "крок": "economy.settle"
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-economics",
+          "question": null,
+          "resultSummary": "разом 298.49 грн, доставка 89 грн; до мінімуму 599 бракує",
+          "seq": 24,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "core.delivery"
+        },
+        {
+          "args": {
+            "без виконавця": 0,
+            "без входу": 0,
+            "виконано": 15,
+            "збій": 1,
+            "кроки": {
+              "без виконавця": [],
+              "без входу": [],
+              "виконано": [
+                "place.address",
+                "place.delivery_types",
+                "place.decide",
+                "slot.list",
+                "slot.pick",
+                "history.receipts",
+                "history.orders",
+                "history.model",
+                "intents.compose",
+                "shelf.search",
+                "shelf.by_article",
+                "decide.pick",
+                "decide.chain",
+                "decide.loop",
+                "economy.settle"
+              ],
+              "збій": [
+                "place.cart — кошик не прочитався (silpo_get_my_shopping_cart: стенд на фікстурах: ме) — слот беремо перший вільний"
+              ],
+              "на оформлення": [
+                "cart.slot",
+                "cart.write",
+                "cart.reread",
+                "cart.revalidate",
+                "cart.reread"
+              ],
+              "не знадобилось": [
+                "decide.clarify"
+              ],
+              "нема чого дати": [],
+              "понад план": []
+            },
+            "на оформлення": 5,
+            "не знадобилось": 1,
+            "нема чого дати": 0,
+            "понад план": 0
+          },
+          "decision": "план керує необов'язковими кроками; головні кроки і запобіжники йдуть завжди",
+          "externalProductId": null,
+          "id": "step-plan-done",
+          "question": null,
+          "resultSummary": "з плану агента виконано 15 з 22 кроків; ще 5 чекають на «Оформити»; 1 не вдалось",
+          "seq": 25,
+          "tag": "15/22",
+          "tagTone": "warn",
+          "tool": "agent.plan"
+        },
+        {
+          "args": {
+            "зобов'язань": 2,
+            "кожен намір має адресу": "так",
+            "рішення відбулось": "так"
+          },
+          "decision": "мету перевіряють один раз і без моделі: рішення про кроки -- агент, вирок про результат -- сталі правила",
+          "externalProductId": null,
+          "id": "step-goal",
+          "question": null,
+          "resultSummary": "мета досягнута — кожен намір має адресу; рішення відбулось",
+          "seq": 26,
+          "tag": "мета",
+          "tagTone": "good",
+          "tool": "core.goal"
+        }
+      ],
+      "trimmed": [],
+      "unresolved": [
+        "шафран"
+      ]
+    },
+    "unresolved": [
+      "шафран"
+    ]
+  },
+  "з межею": {
+    "basket": {
+      "agentTarget": null,
+      "baseTotal": null,
+      "blockers": [
+        "order.cost.min"
+      ],
+      "budget": 3000.0,
+      "checkoutWebLink": null,
+      "cyclesNote": "за циклом стежу за всіма 1 видами твоїх чеків",
+      "declined": [],
+      "deliveryCost": 89.0,
+      "feedback": {
+        "changes": null,
+        "contacts": null
+      },
+      "fillNote": "",
+      "lines": [
+        {
+          "atRisk": true,
+          "basePrice": null,
+          "cardUrl": "https://silpo.ua/product/slug-201",
+          "chain": [],
+          "cheaper": null,
+          "confidence": 0.5,
+          "considered": [],
+          "consideredTotal": 1,
+          "decided": false,
+          "explanation": "підібрано під намір зі списку",
+          "explanationDetail": "перший доступний під намір",
+          "externalProductId": "201",
+          "imageUrl": null,
+          "mandate": "заміни не підбирати, інакше не брати",
+          "mandateAhead": false,
+          "name": "Кава Lavazza",
+          "needsApproval": false,
+          "price": 245.0,
+          "qty": 1.0,
+          "reason": "frequency",
+          "saleNote": null,
+          "sliced": false,
+          "slicingNote": null,
+          "step": null,
+          "swapFork": null,
+          "unit": "шт",
+          "weightKg": null
+        },
+        {
+          "atRisk": false,
+          "basePrice": null,
+          "cardUrl": "https://silpo.ua/product/slug-101",
+          "chain": [],
+          "cheaper": null,
+          "confidence": 0.9,
+          "considered": [],
+          "consideredTotal": 1,
+          "decided": false,
+          "explanation": "закінчиться за 1 дн — беру наперед",
+          "explanationDetail": "звичне з історії — 4 чеки",
+          "externalProductId": "101",
+          "imageUrl": null,
+          "mandate": "заміни не підбирати, інакше не брати",
+          "mandateAhead": true,
+          "name": "Молоко Ферма 2,5%",
+          "needsApproval": false,
+          "price": 53.49,
+          "qty": 2.0,
+          "reason": "frequency",
+          "saleNote": null,
+          "sliced": false,
+          "slicingNote": null,
+          "step": null,
+          "swapFork": null,
+          "unit": "шт",
+          "weightKg": null
+        }
+      ],
+      "notCollected": [],
+      "planNote": null,
+      "postponed": [],
+      "questions": [],
+      "runId": "live",
+      "shelfNote": null,
+      "slot": {
+        "end": "2026-08-14T13:00:00Z",
+        "note": "єдиний вільний з 1 найближчих — вибору не було",
+        "start": "2026-08-14T11:30:00Z"
+      },
+      "stats": {
+        "cycled": 1,
+        "mcpCalls": 7,
+        "model": "без агента",
+        "orders": 0,
+        "receipts": 4,
+        "tokensCached": 0
+      },
+      "textIgnored": [],
+      "topUp": {
+        "items": [],
+        "saving": 30.0,
+        "threshold": 1199.0
+      },
+      "total": 351.98,
+      "totalWeightKg": 0.0,
+      "trace": [
+        {
+          "args": {
+            "адреса в акаунті": true,
+            "входи": [
+              "address"
+            ],
+            "дав": {
+              "address": "1 (place.address)",
+              "delivery_types": "1 (place.delivery_types)"
+            },
+            "крок": "place.address, place.delivery_types"
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-address",
+          "question": null,
+          "resultSummary": "адреса є, способів отримання з філією 1",
+          "seq": 1,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_get_my_delivery_addresses"
+        },
+        {
+          "args": {
+            "крок": "place.cart",
+            "помилка": "silpo_get_my_shopping_cart: стенд на фікстурах: мережі немає, а файлу silpo_get_my_shopping_cart.json теж (спроб: 1)",
+            "причина": "кошик не прочитався (silpo_get_my_shopping_cart: стенд на фікстурах: ме) — слот беремо перший вільний",
+            "уже відомо": [
+              "address",
+              "delivery_types"
+            ]
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-cart",
+          "question": null,
+          "resultSummary": "кошик не прочитався (silpo_get_my_shopping_cart: стенд на фікстурах: ме) — слот беремо перший вільний",
+          "seq": 2,
+          "tag": "не виконано",
+          "tagTone": "warn",
+          "tool": "silpo_get_my_shopping_cart"
+        },
+        {
+          "args": {
+            "входи": [],
+            "дав": {
+              "branch": "1 (place.decide)",
+              "delivery_type": "1 (place.decide)"
+            },
+            "крок": "place.decide"
+          },
+          "decision": "наявність міряється там, звідки збиратимуть",
+          "externalProductId": null,
+          "id": "step-place",
+          "question": null,
+          "resultSummary": "магазин збирання визначено за цією адресою",
+          "seq": 3,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_get_available_delivery_types"
+        },
+        {
+          "args": {
+            "deliveryTypes": [
+              "DeliveryHome"
+            ],
+            "limit": 20,
+            "входи": [
+              "branch",
+              "delivery_type",
+              "slots"
+            ],
+            "вікно": "2026-08-14T11:30:00+00:00 — 2026-08-14T13:00:00+00:00",
+            "дав": {
+              "slot": "8 (slot.pick)",
+              "slots": "1 (slot.list)"
+            },
+            "крок": "slot.list, slot.pick"
+          },
+          "decision": "єдиний вільний з 1 найближчих — вибору не було",
+          "externalProductId": null,
+          "id": "step-slots",
+          "question": null,
+          "resultSummary": "обрано слот сьогодні 14:30–16:00 — вільних 1 з 1 найближчих",
+          "seq": 4,
+          "tag": "не з кошика",
+          "tagTone": "muted",
+          "tool": "silpo_get_time_slots"
+        },
+        {
+          "args": {
+            "max_pages": 20,
+            "online_page": 50,
+            "online_pages": 8,
+            "входи": [
+              "branch",
+              "receipts",
+              "slot"
+            ],
+            "дав": {
+              "history": "1 (history.model)",
+              "orders": "1 (history.orders)",
+              "receipts": "4 (history.receipts)"
+            },
+            "крок": "history.receipts, history.orders, history.model"
+          },
+          "decision": "історія покупок читається лише разом з магазином і слотом; сам набір чеків від магазину не залежить",
+          "externalProductId": null,
+          "id": "step-history",
+          "question": null,
+          "resultSummary": "4 чеків (вся історія, свіжі 90 днів важать більше), 1 різних товарів",
+          "seq": 5,
+          "tag": null,
+          "tagTone": "warn",
+          "tool": "silpo_get_my_offline_orders"
+        },
+        {
+          "args": {
+            "джерело": "code",
+            "кроків": 23,
+            "описи": "",
+            "план": "place.address -> place.delivery_types -> place.cart -> place.decide -> slot.list -> slot.pick -> history.receipts -> history.orders -> history.model -> intents.compose -> shelf.search -> shelf.by_article -> decide.pick -> decide.clarify -> decide.chain -> decide.loop -> economy.settle -> economy.settle -> cart.slot -> cart.write -> cart.reread -> cart.revalidate -> cart.reread",
+            "спроб": 0,
+            "токенів": 0
+          },
+          "decision": "який крок і в якому порядку — рішення моделі; інваріанти (слот від «зараз», перечитування після запису, дозвіл на запис) — сталі правила",
+          "externalProductId": null,
+          "id": "step-plan",
+          "question": null,
+          "resultSummary": "без моделі: план з коду: 23 кроки",
+          "seq": 6,
+          "tag": "план з коду",
+          "tagTone": "muted",
+          "tool": "agent.plan"
+        },
+        {
+          "args": {
+            "людей": null,
+            "режим": "week",
+            "стиль": null
+          },
+          "decision": "тиждень: наміри з комори, циклів і списку, добір під суму",
+          "externalProductId": null,
+          "id": "step-mode",
+          "question": null,
+          "resultSummary": "на тиждень: з поля: 1; за циклами: 0",
+          "seq": 7,
+          "tag": "1 намірів",
+          "tagTone": "muted",
+          "tool": "core.occasion"
+        },
+        {
+          "args": {
+            "вікно, дн": 180,
+            "докинуто": [
+              "Молоко Ферма 2,5%"
+            ],
+            "ключ виду": "перше слово назви: карти видів не було",
+            "наступний похід, дн": 7,
+            "не питали (холодний кеш)": 1,
+            "поза вікном": 0,
+            "пул": 1,
+            "решта пулу": null,
+            "суджено поза потребами": 0,
+            "ціль": "3000"
+          },
+          "decision": "що саме брати наперед — рішення агента; підстава кожного рядка інша, і «закінчилось» на них не пишеться",
+          "externalProductId": null,
+          "id": "step-target",
+          "question": null,
+          "resultSummary": "ціль 3000 грн, коридор 2700-3300; за циклом ~0 грн, докинув 1 поз. на ~106, бракує ~2594 грн",
+          "seq": 8,
+          "tag": "+1 поз.",
+          "tagTone": "warn",
+          "tool": "core.target"
+        },
+        {
+          "args": {
+            "входи": [
+              "history"
+            ],
+            "відкладено стелею": 0,
+            "дав": {
+              "intents": "2 (intents.compose)"
+            },
+            "добір під суму": 1,
+            "докинуте гостем": 0,
+            "дописане в комору": 0,
+            "з поля": 1,
+            "за циклами": 1,
+            "зі списку на потім": 0,
+            "крок": "intents.compose",
+            "під подію": 0,
+            "чекають акції": 0
+          },
+          "decision": "джерела намірів вирішує РЕЖИМ, а не план: половина джерел означала б кошик, у якому мовчки немає сказаного гостем",
+          "externalProductId": null,
+          "id": "step-intents",
+          "question": null,
+          "resultSummary": "список намірів закрито: 2",
+          "seq": 9,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "core.intents"
+        },
+        {
+          "args": {
+            "відкинуто": [],
+            "докинув": 0,
+            "зняв": 0,
+            "наміри": {
+              "докинув": [],
+              "зняв": []
+            },
+            "не взяв із тексту": [],
+            "переріз тексту": 0,
+            "питання": [],
+            "питань": 0,
+            "полиця впізнала": [],
+            "правки плану": [],
+            "токенів": 0
+          },
+          "decision": "що спитати і що докинути — рішення агента; стелі, різ і час очікування — сталі",
+          "externalProductId": null,
+          "id": "step-understand",
+          "question": null,
+          "resultSummary": "етап розуміння не спрацював (модель не підключена)",
+          "seq": 10,
+          "tag": "не спрацював",
+          "tagTone": "warn",
+          "tool": "agent.understand"
+        },
+        {
+          "args": {
+            "артикулів": 0,
+            "входи": [
+              "branch",
+              "history",
+              "slot"
+            ],
+            "дав": {
+              "candidates": "10 (shelf.by_article)"
+            },
+            "крок": "shelf.by_article",
+            "мс пошуку": null,
+            "на полиці": 0,
+            "того ж виду": 0,
+            "того ж виду на полиці": 0
+          },
+          "decision": "крок поставив план: опис інструмента називає пошук числом найнадійнішим збігом",
+          "externalProductId": null,
+          "id": "step-article",
+          "question": null,
+          "resultSummary": "за числовим артикулом: усе своє вже в видачі за назвою — пошуку не було",
+          "seq": 11,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_find_products_batch"
+        },
+        {
+          "args": {
+            "queries": 2,
+            "входи": [
+              "branch",
+              "intents",
+              "slot"
+            ],
+            "дав": {
+              "candidates": "10 (shelf.search)",
+              "intents": "2 (shelf.search)"
+            },
+            "крок": "shelf.search",
+            "мс пошуку": 0,
+            "порожніх": 0
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-batch",
+          "question": null,
+          "resultSummary": "кандидатів: 9 на 2 намірів; 1 намірів упізнано в історії",
+          "seq": 12,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_find_products_batch"
+        },
+        {
+          "args": {
+            "артикулів": 0
+          },
+          "decision": "вузол дерева -- ярус, а не вето: перетин буває порожнім і на правильному наборі, тож порядок він міняє, а кандидатів не знімає",
+          "externalProductId": null,
+          "id": "step-kinds",
+          "question": null,
+          "resultSummary": "карти видів немає: без бази ярус вимкнено — читання не було",
+          "seq": 13,
+          "tag": "ярус не спрацював",
+          "tagTone": "muted",
+          "tool": "catalog_nodes"
+        },
+        {
+          "args": {
+            "поля": {},
+            "правил": 0,
+            "скілів": 0,
+            "чому": "жодного: тригерів не було"
+          },
+          "decision": "інструкція за тригером: кошик без правил і без приводу дістає рівно той промпт, що й до скілів",
+          "externalProductId": null,
+          "id": "step-skills",
+          "question": null,
+          "resultSummary": "жодного скіла: тригерів не було",
+          "seq": 14,
+          "tag": "жодного",
+          "tagTone": "muted",
+          "tool": "core.skills"
+        },
+        {
+          "args": {
+            "крок": "decide.pick",
+            "причина": "без моделі: план зібрано кодом за історією",
+            "уже відомо": [
+              "address",
+              "branch",
+              "candidates",
+              "delivery_type",
+              "delivery_types",
+              "history",
+              "intents",
+              "orders",
+              "receipts",
+              "slot",
+              "slots"
+            ]
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-agent",
+          "question": null,
+          "resultSummary": "без моделі: план зібрано кодом за історією",
+          "seq": 15,
+          "tag": "не виконано",
+          "tagTone": "muted",
+          "tool": "агент"
+        },
+        {
+          "args": {
+            "день слота": "14.08",
+            "рядків": 2
+          },
+          "decision": "дата рахується з доведеного циклу і дня слота, а не питається; ярус зберігання вирішує, чи є сенс просити",
+          "externalProductId": null,
+          "id": "step-shelf-life",
+          "question": null,
+          "resultSummary": "жоден вид не дав доведеного циклу і швидкопсувного ярусу",
+          "seq": 16,
+          "tag": "нічого не змінилось",
+          "tagTone": "muted",
+          "tool": "core.shelf_life"
+        },
+        {
+          "args": {
+            "агент не взяв": 0,
+            "входи": [
+              "candidates"
+            ],
+            "дав": {
+              "chains": "0 (decide.chain)",
+              "lines": "2 (decide.chain)"
+            },
+            "з ланцюжком": 0,
+            "крок": "decide.chain",
+            "не знайшлось": 0,
+            "рядків": 2
+          },
+          "decision": "ланцюжок узгоджується наперед: після оформлення змінити замовлення вже не можна, і замінює збирач",
+          "externalProductId": null,
+          "id": "step-lines",
+          "question": null,
+          "resultSummary": "рядків кошика 2, із ланцюжком замін 0",
+          "seq": 17,
+          "tag": "без замін",
+          "tagTone": "muted",
+          "tool": "core.list"
+        },
+        {
+          "args": {},
+          "decision": "вага рахована з фасовок: у картці товару її немає",
+          "externalProductId": null,
+          "id": "step-weight",
+          "question": null,
+          "resultSummary": "вага кошика 0 кг при ліміті слота 50 кг; без 2 рядків — картка фасовки не назвала",
+          "seq": 18,
+          "tag": "0 кг",
+          "tagTone": "muted",
+          "tool": "core.weight"
+        },
+        {
+          "args": {},
+          "decision": "чи прочитає мандат збирач — не звіряли, галочка замін не читалась; до слота заміню сам — ре-валідація галочки не питає",
+          "externalProductId": null,
+          "id": "step-risk",
+          "question": null,
+          "resultSummary": "ризикових рядків 1 — ланцюжки готові наперед; ще 1 з мандатом напоготові: до слота -3 год при стелі 18",
+          "seq": 19,
+          "tag": "ризик",
+          "tagTone": "warn",
+          "tool": "core.substitution"
+        },
+        {
+          "args": {
+            "входи": [
+              "lines",
+              "slot"
+            ],
+            "дав": {
+              "economics": "1 (economy.settle)"
+            },
+            "крок": "economy.settle"
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-economics",
+          "question": null,
+          "resultSummary": "разом 351.98 грн, доставка 89 грн; до мінімуму 599 бракує",
+          "seq": 20,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "core.delivery"
+        },
+        {
+          "args": {
+            "зняв": [],
+            "межа": "3000.00"
+          },
+          "decision": "що саме зняти під межу — рішення агента; назване гостем не ріжеться",
+          "externalProductId": null,
+          "id": "step-budget",
+          "question": null,
+          "resultSummary": "кошик 351.98 грн у межі 3000.00 грн; це НИЖЧЕ коридору 2700-3300 на 2348 грн",
+          "seq": 21,
+          "tag": "нижче цілі на 2348.02 грн",
+          "tagTone": "muted",
+          "tool": "core.delivery"
+        },
+        {
+          "args": {
+            "без виконавця": 0,
+            "без входу": 0,
+            "виконано": 13,
+            "збій": 1,
+            "кроки": {
+              "без виконавця": [],
+              "без входу": [],
+              "виконано": [
+                "place.address",
+                "place.delivery_types",
+                "place.decide",
+                "slot.list",
+                "slot.pick",
+                "history.receipts",
+                "history.orders",
+                "history.model",
+                "intents.compose",
+                "shelf.search",
+                "shelf.by_article",
+                "decide.chain",
+                "economy.settle"
+              ],
+              "збій": [
+                "place.cart — кошик не прочитався (silpo_get_my_shopping_cart: стенд на фікстурах: ме) — слот беремо перший вільний"
+              ],
+              "на оформлення": [
+                "cart.slot",
+                "cart.write",
+                "cart.reread",
+                "cart.revalidate",
+                "cart.reread"
+              ],
+              "не знадобилось": [
+                "decide.clarify",
+                "decide.loop",
+                "economy.settle"
+              ],
+              "нема чого дати": [
+                "decide.pick — без моделі: план зібрано кодом за історією"
+              ],
+              "понад план": []
+            },
+            "на оформлення": 5,
+            "не знадобилось": 3,
+            "нема чого дати": 1,
+            "понад план": 0
+          },
+          "decision": "план керує необов'язковими кроками; головні кроки і запобіжники йдуть завжди",
+          "externalProductId": null,
+          "id": "step-plan-done",
+          "question": null,
+          "resultSummary": "з плану агента виконано 13 з 23 кроків; ще 5 чекають на «Оформити»; 2 не вдалось",
+          "seq": 22,
+          "tag": "13/23",
+          "tagTone": "warn",
+          "tool": "agent.plan"
+        },
+        {
+          "args": {
+            "зобов'язань": 1,
+            "кожен намір має адресу": "так"
+          },
+          "decision": "мету перевіряють один раз і без моделі: рішення про кроки -- агент, вирок про результат -- сталі правила",
+          "externalProductId": null,
+          "id": "step-goal",
+          "question": null,
+          "resultSummary": "мета досягнута — кожен намір має адресу",
+          "seq": 23,
+          "tag": "мета",
+          "tagTone": "good",
+          "tool": "core.goal"
+        }
+      ],
+      "trimmed": [],
+      "unresolved": []
+    },
+    "unresolved": []
+  },
+  "список і історія": {
+    "basket": {
+      "agentTarget": null,
+      "baseTotal": null,
+      "blockers": [
+        "order.cost.min"
+      ],
+      "budget": null,
+      "checkoutWebLink": null,
+      "cyclesNote": "за циклом стежу за всіма 1 видами твоїх чеків",
+      "declined": [],
+      "deliveryCost": 89.0,
+      "feedback": {
+        "changes": null,
+        "contacts": null
+      },
+      "fillNote": null,
+      "lines": [
+        {
+          "atRisk": false,
+          "basePrice": null,
+          "cardUrl": "https://silpo.ua/product/slug-101",
+          "chain": [
+            {
+              "byWeight": false,
+              "externalProductId": "102",
+              "name": "Молоко Яготинське 2,6%",
+              "price": 75.99,
+              "ratio": "1шт",
+              "source": "similar"
+            }
+          ],
+          "cheaper": null,
+          "confidence": 0.9,
+          "considered": [
+            {
+              "available": true,
+              "byWeight": false,
+              "cardUrl": "https://silpo.ua/product/slug-102",
+              "externalProductId": "102",
+              "imageUrl": null,
+              "kind": null,
+              "name": "Молоко Яготинське 2,6%",
+              "price": 75.99,
+              "ratio": "1шт",
+              "sameKind": null,
+              "sliced": false,
+              "stock": 9.0
+            }
+          ],
+          "consideredTotal": 2,
+          "decided": false,
+          "explanation": "звичне з історії — 4 чеки",
+          "explanationDetail": "звичне з історії — 4 чеки",
+          "externalProductId": "101",
+          "imageUrl": null,
+          "mandate": "якщо немає — Молоко Яготинське 2,6%, інакше не брати",
+          "mandateAhead": true,
+          "name": "Молоко Ферма 2,5%",
+          "needsApproval": false,
+          "price": 53.49,
+          "qty": 2.0,
+          "reason": "frequency",
+          "saleNote": null,
+          "sliced": false,
+          "slicingNote": null,
+          "step": null,
+          "swapFork": null,
+          "unit": "шт",
+          "weightKg": null
+        },
+        {
+          "atRisk": true,
+          "basePrice": null,
+          "cardUrl": "https://silpo.ua/product/slug-201",
+          "chain": [],
+          "cheaper": null,
+          "confidence": 0.5,
+          "considered": [],
+          "consideredTotal": 1,
+          "decided": false,
+          "explanation": "підібрано під намір зі списку",
+          "explanationDetail": "перший доступний під намір",
+          "externalProductId": "201",
+          "imageUrl": null,
+          "mandate": "заміни не підбирати, інакше не брати",
+          "mandateAhead": false,
+          "name": "Кава Lavazza",
+          "needsApproval": false,
+          "price": 245.0,
+          "qty": 1.0,
+          "reason": "frequency",
+          "saleNote": null,
+          "sliced": false,
+          "slicingNote": null,
+          "step": null,
+          "swapFork": null,
+          "unit": "шт",
+          "weightKg": null
+        }
+      ],
+      "notCollected": [],
+      "planNote": null,
+      "postponed": [],
+      "questions": [],
+      "runId": "live",
+      "shelfNote": null,
+      "slot": {
+        "end": "2026-08-14T13:00:00Z",
+        "note": "єдиний вільний з 1 найближчих — вибору не було",
+        "start": "2026-08-14T11:30:00Z"
+      },
+      "stats": {
+        "cycled": 1,
+        "mcpCalls": 7,
+        "model": "без агента",
+        "orders": 0,
+        "receipts": 4,
+        "tokensCached": 0
+      },
+      "textIgnored": [],
+      "topUp": {
+        "items": [],
+        "saving": 30.0,
+        "threshold": 1199.0
+      },
+      "total": 351.98,
+      "totalWeightKg": 0.0,
+      "trace": [
+        {
+          "args": {
+            "адреса в акаунті": true,
+            "входи": [
+              "address"
+            ],
+            "дав": {
+              "address": "1 (place.address)",
+              "delivery_types": "1 (place.delivery_types)"
+            },
+            "крок": "place.address, place.delivery_types"
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-address",
+          "question": null,
+          "resultSummary": "адреса є, способів отримання з філією 1",
+          "seq": 1,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_get_my_delivery_addresses"
+        },
+        {
+          "args": {
+            "крок": "place.cart",
+            "помилка": "silpo_get_my_shopping_cart: стенд на фікстурах: мережі немає, а файлу silpo_get_my_shopping_cart.json теж (спроб: 1)",
+            "причина": "кошик не прочитався (silpo_get_my_shopping_cart: стенд на фікстурах: ме) — слот беремо перший вільний",
+            "уже відомо": [
+              "address",
+              "delivery_types"
+            ]
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-cart",
+          "question": null,
+          "resultSummary": "кошик не прочитався (silpo_get_my_shopping_cart: стенд на фікстурах: ме) — слот беремо перший вільний",
+          "seq": 2,
+          "tag": "не виконано",
+          "tagTone": "warn",
+          "tool": "silpo_get_my_shopping_cart"
+        },
+        {
+          "args": {
+            "входи": [],
+            "дав": {
+              "branch": "1 (place.decide)",
+              "delivery_type": "1 (place.decide)"
+            },
+            "крок": "place.decide"
+          },
+          "decision": "наявність міряється там, звідки збиратимуть",
+          "externalProductId": null,
+          "id": "step-place",
+          "question": null,
+          "resultSummary": "магазин збирання визначено за цією адресою",
+          "seq": 3,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_get_available_delivery_types"
+        },
+        {
+          "args": {
+            "deliveryTypes": [
+              "DeliveryHome"
+            ],
+            "limit": 20,
+            "входи": [
+              "branch",
+              "delivery_type",
+              "slots"
+            ],
+            "вікно": "2026-08-14T11:30:00+00:00 — 2026-08-14T13:00:00+00:00",
+            "дав": {
+              "slot": "8 (slot.pick)",
+              "slots": "1 (slot.list)"
+            },
+            "крок": "slot.list, slot.pick"
+          },
+          "decision": "єдиний вільний з 1 найближчих — вибору не було",
+          "externalProductId": null,
+          "id": "step-slots",
+          "question": null,
+          "resultSummary": "обрано слот сьогодні 14:30–16:00 — вільних 1 з 1 найближчих",
+          "seq": 4,
+          "tag": "не з кошика",
+          "tagTone": "muted",
+          "tool": "silpo_get_time_slots"
+        },
+        {
+          "args": {
+            "max_pages": 20,
+            "online_page": 50,
+            "online_pages": 8,
+            "входи": [
+              "branch",
+              "receipts",
+              "slot"
+            ],
+            "дав": {
+              "history": "1 (history.model)",
+              "orders": "1 (history.orders)",
+              "receipts": "4 (history.receipts)"
+            },
+            "крок": "history.receipts, history.orders, history.model"
+          },
+          "decision": "історія покупок читається лише разом з магазином і слотом; сам набір чеків від магазину не залежить",
+          "externalProductId": null,
+          "id": "step-history",
+          "question": null,
+          "resultSummary": "4 чеків (вся історія, свіжі 90 днів важать більше), 1 різних товарів",
+          "seq": 5,
+          "tag": null,
+          "tagTone": "warn",
+          "tool": "silpo_get_my_offline_orders"
+        },
+        {
+          "args": {
+            "джерело": "code",
+            "кроків": 22,
+            "описи": "",
+            "план": "place.address -> place.delivery_types -> place.cart -> place.decide -> slot.list -> slot.pick -> history.receipts -> history.orders -> history.model -> intents.compose -> shelf.search -> shelf.by_article -> decide.pick -> decide.clarify -> decide.chain -> decide.loop -> economy.settle -> cart.slot -> cart.write -> cart.reread -> cart.revalidate -> cart.reread",
+            "спроб": 0,
+            "токенів": 0
+          },
+          "decision": "який крок і в якому порядку — рішення моделі; інваріанти (слот від «зараз», перечитування після запису, дозвіл на запис) — сталі правила",
+          "externalProductId": null,
+          "id": "step-plan",
+          "question": null,
+          "resultSummary": "без моделі: план з коду: 22 кроки",
+          "seq": 6,
+          "tag": "план з коду",
+          "tagTone": "muted",
+          "tool": "agent.plan"
+        },
+        {
+          "args": {
+            "людей": null,
+            "режим": "week",
+            "стиль": null
+          },
+          "decision": "тиждень: наміри з комори, циклів і списку, добір під суму",
+          "externalProductId": null,
+          "id": "step-mode",
+          "question": null,
+          "resultSummary": "на тиждень: з поля: 3; за циклами: 0",
+          "seq": 7,
+          "tag": "3 намірів",
+          "tagTone": "muted",
+          "tool": "core.occasion"
+        },
+        {
+          "args": {
+            "входи": [
+              "history"
+            ],
+            "відкладено стелею": 0,
+            "дав": {
+              "intents": "3 (intents.compose)"
+            },
+            "добір під суму": 0,
+            "докинуте гостем": 0,
+            "дописане в комору": 0,
+            "з поля": 3,
+            "за циклами": 0,
+            "зі списку на потім": 0,
+            "крок": "intents.compose",
+            "під подію": 0,
+            "чекають акції": 0
+          },
+          "decision": "джерела намірів вирішує РЕЖИМ, а не план: половина джерел означала б кошик, у якому мовчки немає сказаного гостем",
+          "externalProductId": null,
+          "id": "step-intents",
+          "question": null,
+          "resultSummary": "список намірів закрито: 3",
+          "seq": 8,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "core.intents"
+        },
+        {
+          "args": {
+            "відкинуто": [],
+            "докинув": 0,
+            "зняв": 0,
+            "наміри": {
+              "докинув": [],
+              "зняв": []
+            },
+            "не взяв із тексту": [],
+            "переріз тексту": 0,
+            "питання": [],
+            "питань": 0,
+            "полиця впізнала": [],
+            "правки плану": [],
+            "токенів": 0
+          },
+          "decision": "що спитати і що докинути — рішення агента; стелі, різ і час очікування — сталі",
+          "externalProductId": null,
+          "id": "step-understand",
+          "question": null,
+          "resultSummary": "етап розуміння не спрацював (модель не підключена)",
+          "seq": 9,
+          "tag": "не спрацював",
+          "tagTone": "warn",
+          "tool": "agent.understand"
+        },
+        {
+          "args": {
+            "артикулів": 0,
+            "входи": [
+              "branch",
+              "history",
+              "slot"
+            ],
+            "дав": {
+              "candidates": "10 (shelf.by_article)"
+            },
+            "крок": "shelf.by_article",
+            "мс пошуку": null,
+            "на полиці": 0,
+            "того ж виду": 0,
+            "того ж виду на полиці": 0
+          },
+          "decision": "крок поставив план: опис інструмента називає пошук числом найнадійнішим збігом",
+          "externalProductId": null,
+          "id": "step-article",
+          "question": null,
+          "resultSummary": "за числовим артикулом: усе своє вже в видачі за назвою — пошуку не було",
+          "seq": 10,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "silpo_find_products_batch"
+        },
+        {
+          "args": {
+            "queries": 3,
+            "входи": [
+              "branch",
+              "intents",
+              "slot"
+            ],
+            "дав": {
+              "candidates": "10 (shelf.search)",
+              "intents": "3 (shelf.search)"
+            },
+            "крок": "shelf.search",
+            "мс пошуку": 0,
+            "порожніх": 1
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-batch",
+          "question": null,
+          "resultSummary": "кандидатів: 9 на 3 намірів; 1 намірів упізнано в історії; без жодного кандидата: 1",
+          "seq": 11,
+          "tag": "1 без товару",
+          "tagTone": "warn",
+          "tool": "silpo_find_products_batch"
+        },
+        {
+          "args": {
+            "артикулів": 0
+          },
+          "decision": "вузол дерева -- ярус, а не вето: перетин буває порожнім і на правильному наборі, тож порядок він міняє, а кандидатів не знімає",
+          "externalProductId": null,
+          "id": "step-kinds",
+          "question": null,
+          "resultSummary": "карти видів немає: без бази ярус вимкнено — читання не було",
+          "seq": 12,
+          "tag": "ярус не спрацював",
+          "tagTone": "muted",
+          "tool": "catalog_nodes"
+        },
+        {
+          "args": {
+            "поля": {},
+            "правил": 0,
+            "скілів": 0,
+            "чому": "жодного: тригерів не було"
+          },
+          "decision": "інструкція за тригером: кошик без правил і без приводу дістає рівно той промпт, що й до скілів",
+          "externalProductId": null,
+          "id": "step-skills",
+          "question": null,
+          "resultSummary": "жодного скіла: тригерів не було",
+          "seq": 13,
+          "tag": "жодного",
+          "tagTone": "muted",
+          "tool": "core.skills"
+        },
+        {
+          "args": {
+            "крок": "decide.pick",
+            "причина": "без моделі: план зібрано кодом за історією",
+            "уже відомо": [
+              "address",
+              "branch",
+              "candidates",
+              "delivery_type",
+              "delivery_types",
+              "history",
+              "intents",
+              "orders",
+              "receipts",
+              "slot",
+              "slots"
+            ]
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-agent",
+          "question": null,
+          "resultSummary": "без моделі: план зібрано кодом за історією",
+          "seq": 14,
+          "tag": "не виконано",
+          "tagTone": "muted",
+          "tool": "агент"
+        },
+        {
+          "args": {
+            "день слота": "14.08",
+            "рядків": 2
+          },
+          "decision": "дата рахується з доведеного циклу і дня слота, а не питається; ярус зберігання вирішує, чи є сенс просити",
+          "externalProductId": null,
+          "id": "step-shelf-life",
+          "question": null,
+          "resultSummary": "жоден вид не дав доведеного циклу і швидкопсувного ярусу",
+          "seq": 15,
+          "tag": "нічого не змінилось",
+          "tagTone": "muted",
+          "tool": "core.shelf_life"
+        },
+        {
+          "args": {
+            "агент не взяв": 0,
+            "входи": [
+              "candidates"
+            ],
+            "дав": {
+              "chains": "1 (decide.chain)",
+              "lines": "2 (decide.chain)"
+            },
+            "з ланцюжком": 1,
+            "крок": "decide.chain",
+            "не знайшлось": 1,
+            "рядків": 2
+          },
+          "decision": "ланцюжок узгоджується наперед: після оформлення змінити замовлення вже не можна, і замінює збирач",
+          "externalProductId": null,
+          "id": "step-lines",
+          "question": null,
+          "resultSummary": "рядків кошика 2, із ланцюжком замін 1",
+          "seq": 16,
+          "tag": "1 із заміною",
+          "tagTone": "good",
+          "tool": "core.list"
+        },
+        {
+          "args": {},
+          "decision": "вага рахована з фасовок: у картці товару її немає",
+          "externalProductId": null,
+          "id": "step-weight",
+          "question": null,
+          "resultSummary": "вага кошика 0 кг при ліміті слота 50 кг; без 2 рядків — картка фасовки не назвала",
+          "seq": 17,
+          "tag": "0 кг",
+          "tagTone": "muted",
+          "tool": "core.weight"
+        },
+        {
+          "args": {},
+          "decision": "чи прочитає мандат збирач — не звіряли, галочка замін не читалась; до слота заміню сам — ре-валідація галочки не питає",
+          "externalProductId": null,
+          "id": "step-risk",
+          "question": null,
+          "resultSummary": "ризикових рядків 1 — ланцюжки готові наперед; ще 1 з мандатом напоготові: до слота -3 год при стелі 18",
+          "seq": 18,
+          "tag": "ризик",
+          "tagTone": "warn",
+          "tool": "core.substitution"
+        },
+        {
+          "args": {
+            "входи": [
+              "lines",
+              "slot"
+            ],
+            "дав": {
+              "economics": "1 (economy.settle)"
+            },
+            "крок": "economy.settle"
+          },
+          "decision": null,
+          "externalProductId": null,
+          "id": "step-economics",
+          "question": null,
+          "resultSummary": "разом 351.98 грн, доставка 89 грн; до мінімуму 599 бракує",
+          "seq": 19,
+          "tag": null,
+          "tagTone": "muted",
+          "tool": "core.delivery"
+        },
+        {
+          "args": {
+            "без виконавця": 0,
+            "без входу": 0,
+            "виконано": 13,
+            "збій": 1,
+            "кроки": {
+              "без виконавця": [],
+              "без входу": [],
+              "виконано": [
+                "place.address",
+                "place.delivery_types",
+                "place.decide",
+                "slot.list",
+                "slot.pick",
+                "history.receipts",
+                "history.orders",
+                "history.model",
+                "intents.compose",
+                "shelf.search",
+                "shelf.by_article",
+                "decide.chain",
+                "economy.settle"
+              ],
+              "збій": [
+                "place.cart — кошик не прочитався (silpo_get_my_shopping_cart: стенд на фікстурах: ме) — слот беремо перший вільний"
+              ],
+              "на оформлення": [
+                "cart.slot",
+                "cart.write",
+                "cart.reread",
+                "cart.revalidate",
+                "cart.reread"
+              ],
+              "не знадобилось": [
+                "decide.clarify",
+                "decide.loop"
+              ],
+              "нема чого дати": [
+                "decide.pick — без моделі: план зібрано кодом за історією"
+              ],
+              "понад план": []
+            },
+            "на оформлення": 5,
+            "не знадобилось": 2,
+            "нема чого дати": 1,
+            "понад план": 0
+          },
+          "decision": "план керує необов'язковими кроками; головні кроки і запобіжники йдуть завжди",
+          "externalProductId": null,
+          "id": "step-plan-done",
+          "question": null,
+          "resultSummary": "з плану агента виконано 13 з 22 кроків; ще 5 чекають на «Оформити»; 2 не вдалось",
+          "seq": 20,
+          "tag": "13/22",
+          "tagTone": "warn",
+          "tool": "agent.plan"
+        },
+        {
+          "args": {
+            "зобов'язань": 1,
+            "кожен намір має адресу": "так"
+          },
+          "decision": "мету перевіряють один раз і без моделі: рішення про кроки -- агент, вирок про результат -- сталі правила",
+          "externalProductId": null,
+          "id": "step-goal",
+          "question": null,
+          "resultSummary": "мета досягнута — кожен намір має адресу",
+          "seq": 21,
+          "tag": "мета",
+          "tagTone": "good",
+          "tool": "core.goal"
+        }
+      ],
+      "trimmed": [],
+      "unresolved": [
+        "шафран"
+      ]
+    },
+    "unresolved": [
+      "шафран"
+    ]
+  }
+}
