@@ -1,0 +1,39 @@
+name: Деплой → Fedora
+
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - 'src/**'
+      - 'db/**'
+      - 'scripts/**'
+      - 'deploy/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.github/workflows/deploy-fedora.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-fedora
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, komora]
+    if: github.repository == 'mykhailoklimnyk/pantry'
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Синхронізувати /opt/komora
+        run: |
+          rsync -a --delete \
+            --exclude='.env' \
+            --exclude='.mcp-token.json' \
+            --exclude='.venv/' \
+            --exclude='.git/' \
+            ./ /opt/komora/
+          echo "$GITHUB_SHA" > /opt/komora/.deployed-sha
+
+      - name: Деплой
+        run: /opt/komora/deploy/deploy-fedora.sh

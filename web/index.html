@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>ПанTry</title>
+    <link rel="icon" type="image/png" href="/logo-mark.png" />
+    <meta
+      name="description"
+      content="Передбачений тижневий кошик: агент знає, що у вас удома, і узгоджує заміни наперед."
+    />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem('komora.theme') === 'dark' ? 'dark' : 'light'
+      } catch {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+@layer reset, surfaces, type, motion;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    background: var(--page-bg);
+  }
+
+  body {
+    min-height: 100dvh;
+    font-family: var(--font-text);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--page-bg);
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+@layer surfaces {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(22px) saturate(160%);
+  }
+
+  @supports not (backdrop-filter: blur(1px)) {
+    .glass {
+      background: var(--app-bg);
+    }
+  }
+
+  .hscroll {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+
+  .hscroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer type {
+  .mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@layer motion {
+  @keyframes komora-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes komora-breathe {
+    0%,
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.06);
+      opacity: 1;
+    }
+  }
+
+  @keyframes komora-ellipsis {
+    to {
+      width: 0;
+    }
+  }
+
+  @keyframes komora-rise {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}

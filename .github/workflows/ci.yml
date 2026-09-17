@@ -1,0 +1,127 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      db:
+        image: postgres:18.4-alpine
+        env:
+          POSTGRES_USER: komora
+          POSTGRES_PASSWORD: ci-${{ github.run_id }}
+          POSTGRES_DB: komora
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U komora -d komora"
+          --health-interval 5s --health-timeout 3s --health-retries 20
+    env:
+      KOMORA_DATABASE_URL: postgresql://komora:ci-${{ github.run_id }}@localhost:5432/komora
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - run: uv sync --locked
+
+      - name: Міграції накочуються на чисту базу
+        run: uv run komora-migrate
+
+      - name: Сховище чеків відповідає на справжній базі
+        run: uv run python scripts/check_receipt_store.py
+
+      - name: Ruff
+        run: uv run ruff check .
+
+      - name: Типи (ty)
+        run: uv run ty check src
+
+      - name: Тести
+        run: uv run pytest
+
+      - name: types.ts синхронний зі schemas.py
+        run: uv run python scripts/gen_types.py --check
+
+      - name: facts.ts синхронний з репозиторієм
+        run: uv run python scripts/gen_facts.py --check
+
+      - name: перелік ліцензій актуальний
+        run: uv run python scripts/gen_licenses.py --check
+
+      - name: у тексті лише набірні символи
+        run: uv run python scripts/text_lint.py
+
+      - name: у CSS немає мертвих токенів теми
+        run: uv run python scripts/css_tokens.py
+
+      - name: кнопок без обробника немає
+        run: uv run python scripts/dead_buttons.py
+
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+
+      - run: npm run check
+
+      - run: npm run build
+
+  e2e:
+    if: false
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps chromium
+
+      - run: npm run test:e2e
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-traces
+          path: web/test-results/
+          retention-days: 7

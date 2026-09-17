@@ -1,0 +1,8 @@
+[Unit]
+Description=Комора: сказати в Telegram, що %i впав
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/komora
+EnvironmentFile=/opt/komora/.env
+ExecStart=/opt/komora/.venv/bin/komora-notify --unit %i
