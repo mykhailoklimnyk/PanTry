@@ -1,0 +1,53 @@
+{
+ "date": "2026-09-26",
+ "commit": "85f16961",
+ "runs": 5,
+ "models": {
+  "mistral.mistral-large-3-675b-instruct": {
+   "passk": 41,
+   "total": 45,
+   "pass1": 96,
+   "shaky": [
+    "розум_подія 4/5",
+    "своє_проти_акції 4/5",
+    "скіл_обмеження 4/5",
+    "близнюки_томат_чужі 0/5"
+   ]
+  },
+  "gpt-5.6-luna": {
+   "passk": 41,
+   "total": 45,
+   "pass1": 97,
+   "shaky": [
+    "межа 4/5",
+    "варіанти 3/5",
+    "скіл_обмеження 3/5",
+    "близнюки_томат_чужі 3/5"
+   ]
+  }
+ },
+ "prompts": {
+  "nextlist": "c9716171",
+  "occasion": "3fae76e6",
+  "pick.head": "0e82ff24",
+  "pick.label": "7d9d6d22",
+  "pick.queue": "df1471fb",
+  "pick.tail": "83ac1de5",
+  "plan-pantry": "9d8eb37a",
+  "plan-pantry.dict": "cb111b71",
+  "sanity": "59934c88",
+  "skill.brand": "a376ec7e",
+  "skill.container": "a78960c7",
+  "skill.event": "b962e042",
+  "skill.header": "f4e3d8ab",
+  "skill.kids": "d72b5705",
+  "skill.limits": "64ea74bb",
+  "skill.pack": "feb8153c",
+  "skill.pantry_idle": "999a8c14",
+  "skill.pantry_new": "bf461333",
+  "skill.promo": "4482fa9d",
+  "skill.thrift": "21decd44",
+  "twins": "cc714749",
+  "understand": "80549c39"
+ }
+}
