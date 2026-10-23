@@ -1,0 +1,32 @@
+name: Заглушка → Cloudflare Workers
+
+# ПанTry на паузі (23.10.2026): на pantry.klimnyk.dev — лише статична сторінка з посиланнями
+# (stub/). Той самий воркер `komora`, тож домен лишається прив'язаним. Фронт у web/ не
+# деплоїться; щоб повернути його — відновити цей файл з історії.
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - 'stub/**'
+      - '.github/workflows/deploy-cloudflare.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-cloudflare
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Публікація
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: stub
+          command: deploy

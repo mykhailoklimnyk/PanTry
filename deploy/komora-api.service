@@ -1,0 +1,23 @@
+[Unit]
+Description=Комора: живий API
+OnFailure=komora-notify@%n.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=exec
+WorkingDirectory=/opt/komora
+EnvironmentFile=/opt/komora/.env
+ExecStart=/opt/komora/.venv/bin/granian \
+  --interface asgi komora.api.app:app \
+  --host 127.0.0.1 --port 8101 --workers 1
+
+Restart=always
+RestartSec=5
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=read-only
+
+[Install]
+WantedBy=default.target

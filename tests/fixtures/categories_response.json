@@ -1,0 +1,479 @@
+{
+  "success": true,
+  "summary": "Found 78 categories (total: 78)",
+  "categories": [
+    {
+      "id": "1edb13c0-69c3-6622-b5d4-53f89724fa3a",
+      "slug": "yaitsia-528",
+      "title": "Яйця",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1ee3b391-8799-6182-a7cf-d5a21254cccc",
+      "slug": "prygotovana-ta-kopchena-ryba-4433",
+      "title": "Приготовлена риба, салати і пресерви",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1edb13c1-3b4f-627c-9f68-53f89724fa3a",
+      "slug": "moloko-253",
+      "title": "Молоко",
+      "parentId": "1edb13bf-5d7a-6808-8e07-53f89724fa3a"
+    },
+    {
+      "id": "1eef6786-0516-6214-b40a-43cb32ddaa01",
+      "slug": "avokado-4810",
+      "title": "Авокадо",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef1122a-0ca0-6c1e-b661-73eac79b7180",
+      "slug": "kuriachi-iaitsia-4977",
+      "title": "Курячі яйця",
+      "parentId": "1edb13c0-69c3-6622-b5d4-53f89724fa3a"
+    },
+    {
+      "id": "1ef32d81-6701-64f0-be99-cbf14418b734",
+      "slug": "spetsialni-propozytsii-5189",
+      "title": "Добрі промо",
+      "parentId": null
+    },
+    {
+      "id": "1edb13bf-5d85-6898-bde5-53f89724fa3a",
+      "slug": "vershky-257",
+      "title": "Вершки",
+      "parentId": "1edb13bf-5d7a-6808-8e07-53f89724fa3a"
+    },
+    {
+      "id": "1edb13bf-5d7a-6808-8e07-53f89724fa3a",
+      "slug": "moloko-vershky-237",
+      "title": "Молоко, вершки",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1eec0d65-7426-6948-8a01-afbb4942ef2f",
+      "slug": "kopchena-i-v-ialena-ryba-4580",
+      "title": "Копчена і в'ялена риба",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1eef678a-81ee-6792-9339-0dd49ae11c55",
+      "slug": "ogirky-4823",
+      "title": "Огірки",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef1122a-fab6-6458-95f6-634d9a32e17d",
+      "slug": "perepelyni-iaitsia-4978",
+      "title": "Перепелині яйця",
+      "parentId": "1edb13c0-69c3-6622-b5d4-53f89724fa3a"
+    },
+    {
+      "id": "1edb13c0-0278-6ef4-b8c5-53f89724fa3a",
+      "slug": "maslo-margaryn-spred-239",
+      "title": "Масло, маргарин, спред",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1ee3b391-882d-6404-bcf3-d5a21254cccc",
+      "slug": "svizha-ryba-4431",
+      "title": "Свіжа риба",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1edb13e6-5e28-6cf6-8782-53f89724fa3a",
+      "slug": "moloko-sukhe-256",
+      "title": "Молоко сухе",
+      "parentId": "1edb13bf-5d7a-6808-8e07-53f89724fa3a"
+    },
+    {
+      "id": "1eef678b-520d-63a6-a3e7-a1cf4613a05a",
+      "slug": "pomidory-4825",
+      "title": "Помідори",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef1122b-fc33-6adc-8c3c-6b7e57d3fec3",
+      "slug": "yaitsia-inshykh-ptakhiv-4979",
+      "title": "Яйця інших птахів",
+      "parentId": "1edb13c0-69c3-6622-b5d4-53f89724fa3a"
+    },
+    {
+      "id": "1ee3b392-19d8-625a-bc12-d5a21254cccc",
+      "slug": "zamorozhena-ryba-4432",
+      "title": "Заморожена риба",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1eef6784-e1ea-63c2-b983-1d9880f5b96b",
+      "slug": "ovochi-4808",
+      "title": "Овочі",
+      "parentId": "1eef6573-ba50-6752-9535-452bf829897e"
+    },
+    {
+      "id": "1eef6787-0953-6222-af8c-ad33690b3f01",
+      "slug": "kapusta-4813",
+      "title": "Капуста",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef1122f-e55a-600a-87c6-875027612de8",
+      "slug": "kyslomolochni-napoi-4983",
+      "title": "Кисломолочні напої",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1ee3b391-b529-6c8c-9a7d-d5a21254cccc",
+      "slug": "ikra-4439",
+      "title": "Ікра",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1eef678a-e40d-6748-b206-79471f5ee09e",
+      "slug": "perets-4824",
+      "title": "Перець",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef11232-548d-6f2e-b045-875027612de8",
+      "slug": "syr-kyslomolochnyi-syrok-4987",
+      "title": "Сир кисломолочний, сирок",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1edc4c85-4357-6818-ab79-fd905aaf3d41",
+      "slug": "smetana-4376",
+      "title": "Сметана",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1ee3b391-91da-6b00-8f07-d5a21254cccc",
+      "slug": "moreprodukty-ta-moliusky-4435",
+      "title": "Морепродукти та молюски",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1eef6573-ba50-6752-9535-452bf829897e",
+      "slug": "frukty-ovochi-4788",
+      "title": "Фрукти, овочі",
+      "parentId": null
+    },
+    {
+      "id": "1eef6788-6674-6e78-b7c7-b129a08feaf0",
+      "slug": "kartoplia-i-batat-4817",
+      "title": "Картопля і батат",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1edb13c1-34c9-65b0-a10a-53f89724fa3a",
+      "slug": "yogurty-deserty-235",
+      "title": "Йогурти, десерти",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1ee3b391-93f7-6442-aef2-d5a21254cccc",
+      "slug": "m-iaso-4411",
+      "title": "М'ясо",
+      "parentId": null
+    },
+    {
+      "id": "1ee3b393-00b2-6b8a-be60-d5a21254cccc",
+      "slug": "krabovi-palychky-4438",
+      "title": "Крабові палички",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1eef6788-cabd-66e6-95ab-ad33690b3f01",
+      "slug": "morkva-4818",
+      "title": "Морква",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ee3b391-8794-6e66-a421-d5a21254cccc",
+      "slug": "ryba-4430",
+      "title": "Риба",
+      "parentId": null
+    },
+    {
+      "id": "1ee3b395-5f63-6d4e-a379-d5a21254cccc",
+      "slug": "rybni-napivfabrykaty-4434",
+      "title": "Рибні напівфабрикати",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1eef6789-148a-676a-873a-79471f5ee09e",
+      "slug": "buriak-4819",
+      "title": "Буряк",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef112a8-c330-696a-950a-17c91453e4f2",
+      "slug": "glazurovani-syrky-4992",
+      "title": "Глазуровані сирки",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1ee3b391-d6cc-64de-82c0-d5a21254cccc",
+      "slug": "ustrytsi-ta-lobstery-4436",
+      "title": "Устриці та лобстери",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1eee2208-bf69-6270-932d-9b64942aaecd",
+      "slug": "kovbasni-vyroby-i-m-iasni-delikatesy-4731",
+      "title": "Ковбаси і м'ясні делікатеси",
+      "parentId": null
+    },
+    {
+      "id": "1eef678b-b415-69c2-8534-cbf1cb726bf4",
+      "slug": "tsybulia-i-chasnyk-4826",
+      "title": "Цибуля і часник",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef112aa-e702-6a80-8e52-4bddaff06ad9",
+      "slug": "zghushchene-moloko-4993",
+      "title": "Згущене молоко",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1edb13c0-03cb-695a-9a0b-53f89724fa3a",
+      "slug": "syry-1468",
+      "title": "Сири",
+      "parentId": null
+    },
+    {
+      "id": "1ee3b391-d278-6efa-aa71-d5a21254cccc",
+      "slug": "zamorozheni-ravlyky-4440",
+      "title": "Заморожені равлики",
+      "parentId": "1ee3b391-8794-6e66-a421-d5a21254cccc"
+    },
+    {
+      "id": "1eef6789-6567-693a-af7c-0dd49ae11c55",
+      "slug": "redyska-redka-koreneplody-4820",
+      "title": "Редиска, редька, коренеплоди",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef112ab-6fd5-6dda-84ab-df861bf5a26c",
+      "slug": "molochni-produkty-dlia-ditei-4994",
+      "title": "Молочні продукти для дітей",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1eef6785-acf6-630e-8712-e5d7d61eadbc",
+      "slug": "baklazhany-4809",
+      "title": "Баклажани",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef112b6-9935-69e0-832a-d34346e3ea50",
+      "slug": "bezlaktozna-molochna-produktsiia-5000",
+      "title": "Безлактозна молочна продукція",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1ef2f030-0ba6-6184-8d29-a7f377640936",
+      "slug": "khlib-ta-vypichka-5121",
+      "title": "Хліб та випічка",
+      "parentId": null
+    },
+    {
+      "id": "1edb13c1-e6f0-6d2e-81bb-53f89724fa3a",
+      "slug": "bezmolochna-produktsiia-240",
+      "title": "Безмолочна продукція",
+      "parentId": "1edb13bf-5d61-64d4-992b-53f89724fa3a"
+    },
+    {
+      "id": "1eee7633-826f-63d6-a85b-478869d14b82",
+      "slug": "gotovi-stravy-i-kulinariia-4761",
+      "title": "Готові страви і кулінарія",
+      "parentId": null
+    },
+    {
+      "id": "1eef6786-6a71-6118-bafe-8b725a9d700c",
+      "slug": "kabachky-tsukini-4811",
+      "title": "Кабачки, цукіні",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1edb13bf-5d61-64d4-992b-53f89724fa3a",
+      "slug": "molochni-produkty-ta-iaitsia-234",
+      "title": "Молочні продукти та яйця",
+      "parentId": null
+    },
+    {
+      "id": "1eef6786-bba2-67f8-9567-bfb6b0e556eb",
+      "slug": "garbuz-4812",
+      "title": "Гарбуз",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1eef6787-5f6b-6ef2-9b44-bfb6b0e556eb",
+      "slug": "sparzha-4814",
+      "title": "Спаржа",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef7fcd2-eda1-6382-a392-abc7dfb38ae6",
+      "slug": "vlasni-marky-5202",
+      "title": "Власні марки",
+      "parentId": null
+    },
+    {
+      "id": "1ee8d552-eab0-6d3c-b80a-69e4d6eaf2b9",
+      "slug": "lavka-tradytsii-4487",
+      "title": "Лавка Традицій",
+      "parentId": null
+    },
+    {
+      "id": "1eef6787-afee-6b72-9051-affcde5ce47b",
+      "slug": "kvasolia-sparzheva-4815",
+      "title": "Квасоля спаржева",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1eef6788-0d7c-6dd4-a0e7-9549cddea3b6",
+      "slug": "gorokh-molodyi-4816",
+      "title": "Горох молодий",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1f0993bc-9392-6868-a5c1-0354092a05c8",
+      "slug": "aptechka-zdorov-ia-5263",
+      "title": "Аптечка здоров'я",
+      "parentId": null
+    },
+    {
+      "id": "1eef678a-36e1-6452-9fa8-e59fe3e016bc",
+      "slug": "kukurudza-4822",
+      "title": "Кукурудза",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1f06ea8a-31ad-6c70-9023-8793d135ffc8",
+      "slug": "bady-5222",
+      "title": "БАДи",
+      "parentId": null
+    },
+    {
+      "id": "1eef6789-cd7b-626a-96a0-c391442edb56",
+      "slug": "imbyr-4821",
+      "title": "Імбир",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef023a9-b5d5-6e30-aca4-3dc6ff4a5f2a",
+      "slug": "zdorove-kharchuvannia-4864",
+      "title": "Здорове харчування",
+      "parentId": null
+    },
+    {
+      "id": "1eef678c-7da3-6f00-9541-b129a08feaf0",
+      "slug": "ovochevi-nabory-4828",
+      "title": "Овочеві набори",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef0d522-e48a-628c-8ec9-556b04899c01",
+      "slug": "bakaliia-i-konservy-4870",
+      "title": "Бакалія і консерви",
+      "parentId": null
+    },
+    {
+      "id": "1eef678c-334e-6f18-a176-3b6e72d39539",
+      "slug": "mini-ovochi-4827",
+      "title": "Мініовочі",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef0d54a-f111-679e-a183-858e91ff6354",
+      "slug": "sousy-i-spetsii-4938",
+      "title": "Соуси і спеції",
+      "parentId": null
+    },
+    {
+      "id": "1edb13bf-6b49-6ede-b955-53f89724fa3a",
+      "slug": "solodoshchi-498",
+      "title": "Солодощі",
+      "parentId": null
+    },
+    {
+      "id": "1eefc95e-8787-6222-a9f2-c7ab5ec3ebff",
+      "slug": "artyshok-4862",
+      "title": "Артишок",
+      "parentId": "1eef6784-e1ea-63c2-b983-1d9880f5b96b"
+    },
+    {
+      "id": "1ef218d9-d1cd-699a-8b54-edfad8a2e014",
+      "slug": "sneky-ta-chypsy-5016",
+      "title": "Снеки та чипси",
+      "parentId": null
+    },
+    {
+      "id": "1edb13bf-74c7-6560-a933-53f89724fa3a",
+      "slug": "kava-chai-359",
+      "title": "Кава, чай",
+      "parentId": null
+    },
+    {
+      "id": "1edb13bf-2019-6342-897c-53f89724fa3a",
+      "slug": "napoi-52",
+      "title": "Напої",
+      "parentId": null
+    },
+    {
+      "id": "1edb13bf-bf84-61ca-a07d-53f89724fa3a",
+      "slug": "zamorozhena-produktsiia-264",
+      "title": "Заморожена продукція",
+      "parentId": null
+    },
+    {
+      "id": "1edb13bf-26a6-6df4-a019-53f89724fa3a",
+      "slug": "alkogol-22",
+      "title": "Алкоголь",
+      "parentId": null
+    },
+    {
+      "id": "1eddddfa-d4b6-6522-a18a-ad430f1e2e32",
+      "slug": "sygarety-stiky-zhuiky-4384",
+      "title": "Сигарети, стіки, жуйки",
+      "parentId": null
+    },
+    {
+      "id": "1edb13d0-8e3d-651a-9a07-53f89724fa3a",
+      "slug": "kvity-tovary-dlia-sadu-ta-gorodu-476",
+      "title": "Квіти, товари для саду та городу",
+      "parentId": null
+    },
+    {
+      "id": "1edb13bf-7cdf-6220-ae1c-53f89724fa3a",
+      "slug": "dlia-domu-567",
+      "title": "Для дому",
+      "parentId": null
+    },
+    {
+      "id": "1eebb63b-101d-6df6-b4a7-5580d1a5c9a0",
+      "slug": "gigiiena-ta-krasa-4519",
+      "title": "Гігієна та краса",
+      "parentId": null
+    },
+    {
+      "id": "1edb13bf-8f28-6c1a-9f96-53f89724fa3a",
+      "slug": "dytiachi-tovary-449",
+      "title": "Дитячі товари",
+      "parentId": null
+    },
+    {
+      "id": "1edb13bf-1f75-635a-9c3b-53f89724fa3a",
+      "slug": "dlia-tvaryn-653",
+      "title": "Для тварин",
+      "parentId": null
+    }
+  ],
+  "meta": {
+    "limit": 1000,
+    "offset": 0,
+    "total": 78
+  }
+}
